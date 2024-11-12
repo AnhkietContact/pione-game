@@ -28,8 +28,11 @@ const config: Config = {
       backgroundImage: {
         "bgImage-Footer": 'url("/image/svg/bg-footer.svg")',
         "bgImage-Game": 'url("/image/svg/Game.svg")',
+        "bgImage-Sea": 'url("/image/svg/Bg-Sea.svg")',
+        MenuStart: 'url("/image/svg/MenuStart.svg")',
         About: 'url("/image/About.png")',
-        // "gradient-right": "linear-gradient(to right, #FF5C00 0%, #000000 100%)",
+        About2: 'url("/image/About-4.png")',
+        "gradient-right": "linear-gradient(90deg, #FF0000 0%, #FF5C00 100%)",
         "gradient-Header": `linear-gradient(0deg, #FFF500, #FFF500),
           radial-gradient(68.42% 175% at 96.59% -90.62%, rgba(225, 27, 84, 0.86) 54.93%, rgba(255, 193, 7, 0.38) 100%),
           radial-gradient(75% 351.94% at -10.23% 35.94%, rgba(192, 0, 0, 0.92) 21.25%, rgba(225, 27, 84, 0.42) 100%),
@@ -42,6 +45,22 @@ const config: Config = {
         // Gradient từ phải sang trái
         "gradient-right-to-left":
           "linear-gradient(-90deg, rgba(165,0,89,0.02) 40%, rgba(165,0,89,0.7) 70%, rgba(54,0,89,0.36) 100%, rgba(173,0,93,0.7) 83%, rgba(255,0,0,0) 0%)",
+        "gradient-red-transparent":
+          "linear-gradient(to right, #FF0000, rgba(0, 0, 0, 0))",
+        "gradient-orange-transparent":
+          "linear-gradient(to left, #FF5C00, rgba(0, 0, 0, 0))",
+        "gradient-border": `linear-gradient(45deg, 
+          rgba(165, 0, 89, 0.4) 2%, 
+          rgba(165, 0, 89, 0.7) 19%, 
+          rgba(165, 0, 89, 1) 36%, 
+          rgba(173, 0, 93, 0.7) 59%, 
+          rgba(255, 0, 0, 0) 83%)`,
+        "gradient-gray":
+          "linear-gradient(90deg, rgba(97, 97, 97, 1) 0%, rgba(255, 255, 255, 0) 100%)",
+        "gradient-button":
+          "linear-gradient(47deg, rgba(255, 166, 250, 1) 47%, rgba(212, 60, 60, 1) 97%)",
+        "gradient-bg":
+          "linear-gradient(90deg, rgba(255, 86, 86, 1) 18%, rgba(238, 54, 54, 1) 43%, rgba(226, 59, 199, 1) 85%, rgba(123, 0, 89, 1) 100%)",
       },
       fontFamily: {
         orbitron: ['"Orbitron"', "sans-serif"],
@@ -53,6 +72,7 @@ const config: Config = {
         "Shadow-White": "0 4px 6px rgba(255, 255, 255, 0.5)",
         "text-shadow": "0 4px 6px rgba(255, 255, 255, 0.5)",
         red: "0 4px 6px rgba(255, 0, 0, 0.5)",
+        Purple: "#36011D",
       },
       container: {
         ...defaultConfig?.theme?.container,
@@ -68,6 +88,37 @@ const config: Config = {
           lg: "1100px",
           xl: "1280px",
           "2xl": "1536px",
+        },
+      },
+      animation: {
+        floating: "floating 3s ease-in-out infinite",
+        "move-left": "move-left 3s ease-in-out infinite",
+        "move-right": "move-right 3s ease-in-out infinite",
+      },
+      keyframes: {
+        floating: {
+          "0%, 100%": {
+            transform: "translateY(-10px)",
+          },
+          "50%": {
+            transform: "translateY(10px)",
+          },
+        },
+        "move-left": {
+          "0%, 100%": {
+            transform: "translateX(0)",
+          },
+          "50%": {
+            transform: "translateX(-50px)",
+          },
+        },
+        "move-right": {
+          "0%, 100%": {
+            transform: "translateX(0)",
+          },
+          "50%": {
+            transform: "translateX(50px)",
+          },
         },
       },
     },

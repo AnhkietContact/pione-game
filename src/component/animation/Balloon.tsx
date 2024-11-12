@@ -10,8 +10,8 @@ const Balloon = () => {
           alt="Balloon Image"
           width={500}
           height={500}
-          className="absolute animate-bounce"
-        />  
+          className="absolute animate-floating"
+        />
         <Image
           src={"/image/animation/Mammon.png"}
           alt="Balloon Image"
