@@ -24,6 +24,7 @@ const config: Config = {
         "primary-8": "#921CF5",
         customRed: "#FF0000",
         customYellow: "#FFB703",
+        "white-opacity-10": "rgba(255, 255, 255, 0.1)",
       },
       backgroundImage: {
         "bgImage-Footer": 'url("/image/svg/bg-footer.svg")',
@@ -49,7 +50,7 @@ const config: Config = {
           "linear-gradient(to right, #FF0000, rgba(0, 0, 0, 0))",
         "gradient-orange-transparent":
           "linear-gradient(to left, #FF5C00, rgba(0, 0, 0, 0))",
-        "gradient-border": `linear-gradient(45deg, 
+        "gradient-border": `linear-gradient(-45deg, 
           rgba(165, 0, 89, 0.4) 2%, 
           rgba(165, 0, 89, 0.7) 19%, 
           rgba(165, 0, 89, 1) 36%, 
@@ -61,6 +62,11 @@ const config: Config = {
           "linear-gradient(47deg, rgba(255, 166, 250, 1) 47%, rgba(212, 60, 60, 1) 97%)",
         "gradient-bg":
           "linear-gradient(90deg, rgba(255, 86, 86, 1) 18%, rgba(238, 54, 54, 1) 43%, rgba(226, 59, 199, 1) 85%, rgba(123, 0, 89, 1) 100%)",
+        "Red-Opacity":
+          "linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(75, 5, 43, 0) 100%)",
+        "Red-Opacity-Right":
+          "linear-gradient(270deg, rgba(255, 0, 0, 1) 0%, rgba(75, 5, 43, 0) 100%)",
+        "Gradient-white": "rgba(255, 255, 255, 0.1)",
       },
       fontFamily: {
         orbitron: ['"Orbitron"', "sans-serif"],
@@ -94,31 +100,64 @@ const config: Config = {
         floating: "floating 3s ease-in-out infinite",
         "move-left": "move-left 3s ease-in-out infinite",
         "move-right": "move-right 3s ease-in-out infinite",
+        "move-top": "move-top 3s ease-in-out infinite",
+        "move-bottom": "move-bottom 3s ease-in-out infinite",
+        fade: "fade 1s ease-in-out",
+        "fade-down": "fade-down 1s ease-in-out",
+        "fade-up": "fade-up 1s ease-in-out",
+        "fade-left": "fade-left 1s ease-in-out",
+        "fade-right": "fade-right 1s ease-in-out",
+        "flip-up": "flip-up 1s ease-in-out",
+        "flip-down": "flip-down 1s ease-in-out",
       },
       keyframes: {
         floating: {
-          "0%, 100%": {
-            transform: "translateY(-10px)",
-          },
-          "50%": {
-            transform: "translateY(10px)",
-          },
+          "0%, 100%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(10px)" },
         },
         "move-left": {
-          "0%, 100%": {
-            transform: "translateX(0)",
-          },
-          "50%": {
-            transform: "translateX(-50px)",
-          },
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(-50px)" },
         },
         "move-right": {
-          "0%, 100%": {
-            transform: "translateX(0)",
-          },
-          "50%": {
-            transform: "translateX(50px)",
-          },
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(50px)" },
+        },
+        "move-top": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-50px)" },
+        },
+        "move-bottom": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(50px)" },
+        },
+        fade: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "fade-down": {
+          "0%": { opacity: "0", transform: "translateY(-20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "fade-up": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "fade-left": {
+          "0%": { opacity: "0", transform: "translateX(20px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        "fade-right": {
+          "0%": { opacity: "0", transform: "translateX(-20px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        "flip-up": {
+          "0%": { transform: "rotateX(90deg)", opacity: "0" },
+          "100%": { transform: "rotateX(0)", opacity: "1" },
+        },
+        "flip-down": {
+          "0%": { transform: "rotateX(-90deg)", opacity: "0" },
+          "100%": { transform: "rotateX(0)", opacity: "1" },
         },
       },
     },

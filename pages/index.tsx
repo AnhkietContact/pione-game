@@ -5,7 +5,9 @@ import Balloon from "../src/component/animation/Balloon";
 // import Balloon2 from "../src/component/animation/Balloon2";
 import MainLayout from "../src/layout/MainLayout";
 import Image from "next/image";
-
+import OrgariumCounter from "../src/component/OrgariumCounter";
+import AccordionUsage from "../src/component/Accordion";
+import SubscribeForm from "../src/component/Sub";
 const HomePione = () => {
   return (
     <MainLayout>
@@ -26,7 +28,7 @@ const HomePione = () => {
               use a gun to hunt various fish species under the ocean, each with
               unique characteristics and reward values.
             </span>
-            <div className="flex flex-col xl:gap-20 xl:flex-row mt-10">
+            <div className="flex gap-2 md:gap-20 flex-row justify-center mt-10">
               <Image
                 src="/image/icon/GooglePlay.svg"
                 width="150"
@@ -49,36 +51,37 @@ const HomePione = () => {
       </section>
       <section className="bg-About bg-no-repeat bg-cover">
         <div className="container">
-          <div className=" flex justify-center items-center">
+          <div className="flex justify-center items-center">
             <Image
               src={"/image/animation/Ball1.svg"}
               alt="BallLeft Image"
-              width={120}
-              height={120}
-              className="relative -mr-6 -left-4"
+              width={80}
+              height={80}
+              className="relative -mr-4 left-1 z-30 sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px]"
             />
             <div className="flex justify-center items-center">
               {/* Màu 1 dưới */}
-              <div className="relative rounded w-52 h-16 bg-gradient-red-transparent z-10">
+              <div className="relative rounded w-36 h-12 sm:w-40 sm:h-14 md:w-44 md:h-16 lg:w-52 lg:h-16 bg-gradient-red-transparent z-10">
                 {/* Màu 2 trên */}
                 <div className="absolute top-0 left-0 right-0 bottom-0 rounded bg-gradient-orange-transparent z-20">
                   <div className="flex justify-center items-center h-full">
-                    <span className="text-[24px] font-ibm font-bold text-white drop-shadow-[0_4px_4px_rgba(255,0,0,0.8)]">
+                    <span className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-ibm font-bold text-white drop-shadow-[0_4px_4px_rgba(255,0,0,0.8)]">
                       About the game
                     </span>
                   </div>
                 </div>
               </div>
             </div>
+
             <Image
               src={"/image/animation/Ball2.svg"}
               alt="Balloon Image"
-              width={100}
-              height={100}
-              className="relative -ml-6 -right-4"
+              width={80}
+              height={80}
+              className="relative -ml-4 -right-2 z-30 sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[100px] lg:h-[100px]"
             />
           </div>
-          <div className="flex items-center justify-between mt-10">
+          <div className="flex flex-col xl:flex-row items-center md:justify-between mt-10">
             <div className="flex flex-col items-center space-y-6 p-6">
               <div className="relative">
                 <div className="absolute -left-10 -top-16 z-30 flex flex-col items-center text-[32px] font-ibm font-bold gap-y-0">
@@ -94,11 +97,11 @@ const HomePione = () => {
                   />
                 </div>
                 {/* Phần tử dưới với gradient */}
-                <div className="rounded-xl w-[800px] h-[250px] bg-gradient-left-to-right absolute top-10 left-1/2 transform -translate-x-1/2 -translate-y-16 z-10" />
+                <div className="rounded-xl min-w-[320px] md:w-[800px] min-h-[350px] md:h-[250px] bg-gradient-left-to-right absolute top-10 left-1/2 transform -translate-x-1/2 -translate-y-16 z-10" />
                 {/* Phần tử trên lớn hơn, có gradient và chứa chữ */}
-                <div className="rounded-xl w-[800px] h-[250px] bg-gradient-right-to-left z-20 relative">
+                <div className="rounded-xl min-w-[320px] md:w-[800px] min-h-[350px] md:h-[250px] bg-gradient-right-to-left z-20 relative">
                   <div className="absolute inset-0 mt-14">
-                    <div className=" text-[16px] px-4 ">
+                    <div className="font-inter text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] px-4 ">
                       <p>
                         PIONE GAME is a blockchain game with a
                         &quot;play-to-earn&quot; model, where players can
@@ -126,11 +129,11 @@ const HomePione = () => {
             <Image
               src={"/image/animation/Ball1.svg"}
               alt="BallLeft Image"
-              width={120}
-              height={120}
-              className=""
+              width={80}
+              height={80}
+              className="relative -mr-6 -left-4"
             />
-            <div className=" rounded w-52 h-16 bg-gradient-right ">
+            <div className="rounded w-52 h-16 bg-gradient-right ">
               <div className="flex justify-center items-center h-full">
                 <span className="text-[24px] font-ibm font-bold text-white drop-shadow-[0_4px_4px_rgba(255,0,0,0.8)]">
                   Game modes
@@ -140,50 +143,53 @@ const HomePione = () => {
             <Image
               src={"/image/animation/Ball2.svg"}
               alt="Balloon Image"
-              width={100}
-              height={100}
+              width={80}
+              height={80}
               className="relative -ml-6 -right-4"
             />
           </div>
-          <div className="relative flex items-center justify-between">
+          <div className="relative flex items-center justify-center gap-6 md:gap-20">
+            {/* Hình bên trái với animation */}
             <Image
               src={"/image/animation/Balloon-1.svg"}
               alt="Balloon Image"
-              width={400}
-              height={400}
-              className="absolute animate-move-left left-0 z-10"
+              width={200}
+              height={200}
+              className="animate-floating hidden md:block w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px] z-10"
             />
-            <div className="">
-              <div className="flex items-center justify-center gap-20 relative z-20">
-                <Image
-                  src={"/image/animation/ElementKingdom.svg"}
-                  alt="Balloon Image"
-                  width={300}
-                  height={300}
-                  className=""
-                />
-                <Image
-                  src={"/image/animation/ElementFulu.svg"}
-                  alt="Balloon Image"
-                  width={500}
-                  height={500}
-                  className=" mb-40"
-                />
-                <Image
-                  src={"/image/animation/ElementJourney.svg"}
-                  alt="Balloon Image"
-                  width={300}
-                  height={300}
-                  className=""
-                />
-              </div>
+
+            {/* Hình ảnh ở giữa */}
+            <div className="flex items-center flex-col md:flex-row justify-center gap-6 md:gap-10 lg:gap-20 z-20">
+              <Image
+                src={"/image/animation/ElementKingdom.svg"}
+                alt="Element Kingdom"
+                width={323}
+                height={453}
+                className=""
+              />
+              <Image
+                src={"/image/animation/ElementFulu.svg"}
+                alt="Element Fulu"
+                width={516}
+                height={648}
+                className=""
+              />
+              <Image
+                src={"/image/animation/ElementJourney.svg"}
+                alt="Element Journey"
+                width={279}
+                height={452}
+                className=""
+              />
             </div>
+
+            {/* Hình bên phải với animation */}
             <Image
               src={"/image/animation/Balloon-3.svg"}
               alt="Balloon Image"
-              width={400}
-              height={400}
-              className="absolute animate-move-right right-0 z-10"
+              width={200}
+              height={200}
+              className="animate-floating hidden md:block w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px] z-10"
             />
           </div>
         </div>
@@ -194,9 +200,9 @@ const HomePione = () => {
             <Image
               src={"/image/animation/Ball1.svg"}
               alt="BallLeft Image"
-              width={120}
-              height={120}
-              className="relative -mr-6 -left-4"
+              width={80}
+              height={80}
+              className="relative -mr-6 -left-2 z-30"
             />
             <div className="flex justify-center items-center">
               {/* Màu 1 dưới */}
@@ -214,19 +220,19 @@ const HomePione = () => {
             <Image
               src={"/image/animation/Ball2.svg"}
               alt="Balloon Image"
-              width={100}
-              height={100}
-              className="relative -ml-6 -right-4"
+              width={80}
+              height={80}
+              className="relative -ml-6 right-2 z-30"
             />
           </div>
           <div className="flex flex-col items-center space-y-6 p-6">
-            <div className="relative">
+            <div className="relative mt-20">
               <div className="absolute -left-5 -top-16 z-30 flex flex-col items-center text-[32px] font-ibm font-bold gap-y-0">
                 <div className="relative flex items-center justify-center">
                   <Image
                     src="/image/animation/Balloon-4.svg"
                     alt="icon"
-                    width={240}
+                    width={150}
                     height={180}
                   />
                   <span className="absolute font-ibm font-bold text-[24px] text-white drop-shadow-[0_4px_4px_rgba(255,0,0,0.8)]">
@@ -234,51 +240,50 @@ const HomePione = () => {
                   </span>
                 </div>
               </div>
-
-              <div className="rounded-xl w-full h-[500px] bg-gradient-border z-20 relative flex justify-center items-center">
-                <div className="px-5 py-10 flex justify-center gap-20">
+              <div className="rounded-xl w-full min-h-[600px] md:min-h-[800px] xl:h-[500px] bg-gradient-border z-20 relative flex justify-center items-center">
+                <div className="px-4 py-6 md:px-10 md:py-10 flex flex-col lg:flex-row items-center justify-center gap-10 md:gap-20">
                   {/* Coin và Arrow */}
-                  <div className="flex justify-center items-center">
-                    <div className="flex flex-col items-center ">
+                  <div className="flex justify-center items-center mt-10 space-x-2 md:space-x-4">
+                    <div className="flex flex-col items-center">
                       <Image
                         src="/image/coin/CoinPIO.svg"
                         alt="icon"
                         width={136}
                         height={132}
+                        className="w-[70px] sm:w-[100px] md:w-[120px] lg:w-[155px]"
                       />
-                      <span className="font-orbitron font-bold text-[24px] drop-shadow-[0_4px_4px_rgba(255,0,0,0.8)]">
-                        PIO
-                      </span>
                     </div>
                     <Image
                       src="/image/coin/Arrow.svg"
                       alt="icon"
-                      width={216}
-                      height={70}
+                      width={120}
+                      height={50}
+                      className="w-[100px] sm:w-[120px] md:w-[150px] lg:w-[216px]"
                     />
                     <Image
                       src="/image/coin/Coin.svg"
                       alt="icon"
-                      width={155}
-                      height={130}
+                      width={100}
+                      height={100}
+                      className="w-[70px] sm:w-[100px] md:w-[120px] lg:w-[155px]"
                     />
                   </div>
 
                   {/* Gold Coin Description */}
-                  <div className="relative py-10 px-5 rounded-xl w-[569px] bg-black bg-opacity-20 flex flex-col items-center">
-                    <div className="absolute -top-16 left-0 flex flex-col items-center z-30">
-                      <span className="font-ibm font-bold text-[64px] drop-shadow-[0_4px_4px_rgba(255,0,0,0.8)]">
+                  <div className="relative py-6 px-4 mt-5 md:py-10 md:px-5 rounded-xl w-full sm:w-[300px] md:w-[400px] lg:w-[569px] bg-black bg-opacity-20 flex flex-col items-center">
+                    <div className="absolute -top-12 left-0 flex flex-col items-center z-30">
+                      <span className="font-ibm font-bold text-[32px] sm:text-[48px] md:text-[64px] drop-shadow-[0_4px_4px_rgba(255,0,0,0.8)]">
                         Gold coin
                       </span>
                       <Image
                         src="/image/svg/thunder.svg"
                         alt="icon"
-                        className="-mt-[40px]"
-                        width={362}
-                        height={98}
+                        className="-mt-[20px] sm:-mt-[30px] md:-mt-[40px]"
+                        width={240}
+                        height={60}
                       />
                     </div>
-                    <span className="text-justify font-inter text-[16px] mt-10">
+                    <span className="text-justify font-inter text-[14px] sm:text-[16px] mt-10">
                       In PIONE GAME, players can easily exchange PIO Coins for
                       Gold Coins to participate in exciting activities and
                       improve their fishing efficiency. PIO Coin is the main
@@ -299,13 +304,63 @@ const HomePione = () => {
       <section className="bg-About2 bg-no-repeat bg-cover">
         <SwiperPage />
       </section>
-      <section>
-        <div>
-          <div className="w-full max-w-[500px] h-16 bg-gradient-to-r from-[#FF0000] via-[#FF0000] to-[#4B052B] opacity-80 rounded-xl flex justify-center items-center">
-            <span className="text-white text-xl font-semibold">
+      <section className="mt-10">
+        <div className="container">
+          <div className="max-w-[400px] py-3 px-6 bg-Red-Opacity rounded-xl shadow-lg">
+            <span className=" font-orbitron text-xl font-semibold">
               Far more to explore
             </span>
           </div>
+          <div className="mt-5 max-w-[500px]">
+            <span className="font-inter text-[20px]">
+              Peerless, actionable, multichain data and coverage on the widest
+              selection of dapps, NFT collections, DeFi projects and more. View
+              top collections, trending dapps, trader volume and maybe, just
+              maybe, uncover the next blockchain unicorn.
+            </span>
+          </div>
+          <div className="relative">
+            <OrgariumCounter />
+          </div>
+        </div>
+        <div className="container mt-20">
+          <div className="flex justify-end ml-auto max-w-[400px] py-3 px-6 bg-Red-Opacity-Right rounded-xl shadow-lg">
+            <span className="flex justify-end font-orbitron text-xl font-semibold">
+              You&apos;re in control
+            </span>
+          </div>
+          <div className="max-w-[500px]">
+            <span className="font-inter text-[20px] ">
+              Effectively manage your digital assets, swap, buy, sell, (even
+              take a little inspiration from the famous) all from within your
+              PIONE GAME Portfolio.
+            </span>
+          </div>
+          <button className="rounded-xl bg-gradient-bg flex justify-center items-center p-4 mt-10">
+            <span className="text-center font-orbitron font-bold text-[13px]">
+              Go to portfolio app
+            </span>
+          </button>
+          <div className="flex items-center flex-col md:flex-row justify-between">
+            {/* Phần Accordion */}
+            <div className="md:w-1/2 mt-10 h-full flex items-center justify-center">
+              <AccordionUsage />
+            </div>
+
+            {/* Phần hình ảnh */}
+            <div className="w-1/2 relative h-full flex items-center justify-center">
+              <Image
+                src={"/image/animation/Balloon-5.svg"}
+                alt="BallLeft Image"
+                width={698}
+                height={614}
+                className="animate-floating "
+              />
+            </div>
+          </div>
+        </div>
+        <div className="mt-20">
+          <SubscribeForm />
         </div>
       </section>
     </MainLayout>

@@ -5,7 +5,6 @@ import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
-import styles from "../styles/swiperCustom.module.css"; // Import CSS Module
 
 const SwiperAbout = () => {
   const slides = [
@@ -15,17 +14,17 @@ const SwiperAbout = () => {
   ];
 
   return (
-    <div className="relative w-full max-w-3xl mx-auto">
+    <div className="relative w-full mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-3xl">
       <Swiper
         spaceBetween={10}
         slidesPerView={1}
+        loop={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
-          el: `.${styles.swiperPagination}`,
         }}
         modules={[Autoplay, Pagination]}
       >
@@ -45,17 +44,14 @@ const SwiperAbout = () => {
         ))}
       </Swiper>
 
-      {/* Pagination mặc định được Swiper tự động tạo ra */}
-      <div className={`${styles.swiperPagination} swiper-pagination`}></div>
-      {/* Biểu tượng Pause ở góc dưới bên trái, nằm trên swiper */}
-      <div className="absolute -bottom-[25px] -left-[40px]  shadow-[0_0px_15px_5px_rgba(255,255,255,0.8)] rounded-xl z-10">
+      {/* Biểu tượng Pause ở góc dưới bên trái, thay đổi kích thước theo responsive */}
+      <div className="absolute -bottom-5 -left-8 shadow-[0_0px_15px_5px_rgba(255,255,255,0.8)] rounded-xl z-10">
         <Image
           src="/image/Pause.png"
           alt="Small Icon"
-          width={120}
-          height={120}
-          className=""
-          objectFit="cover"
+          width={80} // Kích thước icon thay đổi theo màn hình
+          height={80}
+          className="md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24"
         />
       </div>
     </div>

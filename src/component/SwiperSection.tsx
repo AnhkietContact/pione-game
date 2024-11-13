@@ -3,10 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import "swiper/css";
-import ButtonNextSwiper from "./CustomSwiper/ButtonNextSwiper";
-import ButtonPrevSwiper from "./CustomSwiper/ButtonPrevSwiper";
+import ButtonNextSwiper from "./CustomSwiper/ButtonNextSwiper"; // Import nút Next
+import ButtonPrevSwiper from "./CustomSwiper/ButtonPrevSwiper"; // Import nút Prev
 import Image from "next/image";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import "swiper/css/navigation";
 
 const SwiperPage = () => {
   return (
@@ -16,9 +17,9 @@ const SwiperPage = () => {
         <Image
           src={"/image/animation/Ball3.svg"}
           alt="BallLeft Image"
-          width={120}
-          height={120}
-          className="absolute left-0 z-30"
+          width={80}
+          height={80}
+          className="relative -mr-6 left-10 z-30"
         />
 
         {/* Nền gradient dài */}
@@ -26,7 +27,7 @@ const SwiperPage = () => {
           <div className="relative rounded w-full h-16 bg-gradient-red-transparent z-10">
             {/* Màu 2 trên */}
             <div className="absolute top-0 left-0 right-0 bottom-0 rounded bg-gradient-orange-transparent z-20">
-              <div className="flex justify-center items-center  h-full">
+              <div className="flex justify-center items-center h-full">
                 <span className="text-[24px] font-ibm font-bold text-white drop-shadow-[0_4px_4px_rgba(255,0,0,0.8)]">
                   Latest news
                 </span>
@@ -39,12 +40,13 @@ const SwiperPage = () => {
         <Image
           src={"/image/animation/Ball2.svg"}
           alt="Balloon Image"
-          width={100}
-          height={100}
-          className="absolute right-0 z-30"
+          width={80}
+          height={80}
+          className="relative -ml-4 right-2 z-30"
         />
       </div>
-      <div className="container w-full mx-auto p-10">
+
+      <div className="container w-full mx-auto p-10 relative">
         <Swiper
           spaceBetween={50}
           slidesPerView={4}
@@ -52,10 +54,7 @@ const SwiperPage = () => {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          navigation={{
-            prevEl: ".custom_prevb",
-            nextEl: ".custom_nextb",
-          }}
+          loop={true}
           breakpoints={{
             300: {
               slidesPerView: 1,
@@ -82,11 +81,10 @@ const SwiperPage = () => {
           {slidesData.map(({ id, title, image }) => (
             <SwiperSlide
               key={id}
-              className=" flex flex-col items-center container py-5 bg-gradient-gray rounded-xl border-2 border-gray-300 min-h-[320px]" // Thiết lập min-height để giữ chiều cao cho slide
+              className="flex flex-col items-center container py-5 bg-gradient-gray rounded-xl border-2 border-gray-300 min-h-[320px]"
             >
-              {/* Nội dung SwiperSlide */}
               <Image
-                src={image} // Dùng đường dẫn ảnh từ dữ liệu
+                src={image}
                 alt={title}
                 width={250}
                 height={122}
@@ -96,7 +94,6 @@ const SwiperPage = () => {
                 {title}
               </h2>
 
-              {/* Dãy thông tin bên dưới */}
               <div className="flex justify-between items-center w-full mt-4">
                 <span className="font-orbitron">Yesterday</span>
                 <div className="flex items-center px-4 py-2 rounded-xl bg-gradient-bg border-2 border-gradient-button">

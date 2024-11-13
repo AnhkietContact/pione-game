@@ -53,7 +53,7 @@ const Header: React.FC = () => {
             </Link>
           </div>
           {/* Navigation */}
-          <nav className="hidden md:flex space-x-6 font-orbitron">
+          <nav className="hidden xl:flex space-x-6 font-orbitron">
             {Scrollheader.map((item) => (
               <Link
                 key={item.id}
@@ -67,9 +67,9 @@ const Header: React.FC = () => {
               </Link>
             ))}
           </nav>
- 
+
           {/* Hamburger Menu Icon */}
-          <div className="md:hidden flex items-center justify-center gap-4">
+          <div className="xl:hidden flex items-center justify-center gap-4">
             <button
               onClick={toggleMenu}
               aria-label="Toggle Menu"
@@ -85,14 +85,14 @@ const Header: React.FC = () => {
         </div>
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden bg-opacity-90 bg-[#141414] p-4">
+          <nav className="lg:hidden bg-opacity-90 bg-[#141414] p-4">
             {Scrollheader.map((item) => (
               <Link
                 key={item.id}
                 href={item.link}
                 className="block py-2"
                 onClick={toggleMenu}
-                scroll={false} // Prevent scrolling to top on click
+                scroll={false}
               >
                 {item.label}
               </Link>
