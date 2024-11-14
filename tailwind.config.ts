@@ -103,14 +103,20 @@ const config: Config = {
         "move-top": "move-top 3s ease-in-out infinite",
         "move-bottom": "move-bottom 3s ease-in-out infinite",
         fade: "fade 1s ease-in-out",
-        "fade-down": "fade-down 1s ease-in-out",
+        "fade-down": "fade-down 2s ease-in-out",
         "fade-up": "fade-up 1s ease-in-out",
         "fade-left": "fade-left 1s ease-in-out",
         "fade-right": "fade-right 1s ease-in-out",
         "flip-up": "flip-up 1s ease-in-out",
         "flip-down": "flip-down 1s ease-in-out",
+        "rotate-y": "rotate-y 1s ease-in-out forwards",
       },
       keyframes: {
+        "rotate-y": {
+          "0%": { transform: "rotateY(0deg)" },
+          "50%": { transform: "rotateY(180deg)" },
+          "100%": { transform: "rotateY(360deg)" },
+        },
         floating: {
           "0%, 100%": { transform: "translateY(-10px)" },
           "50%": { transform: "translateY(10px)" },

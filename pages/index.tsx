@@ -8,12 +8,23 @@ import Image from "next/image";
 import OrgariumCounter from "../src/component/OrgariumCounter";
 import AccordionUsage from "../src/component/Accordion";
 import SubscribeForm from "../src/component/Sub";
+import Carousel from "../src/component/Carousel";
+import useInView from "../src/hooks/useInView";
+
 const HomePione = () => {
+  const fadeRightInView = useInView(".fade-right", { threshold: 0.5 });
+  const fadeLeftInView = useInView(".fade-left", { threshold: 0.5 });
+  const fadeDownInView = useInView(".fade-down", { threshold: 0.5 });
+  const fadeUpInView = useInView(".fade-up", { threshold: 0.5 });
   return (
     <MainLayout>
       <section className="bg-bgImage-Game bg-no-repeat bg-cover min-h-screen mt-20">
-        <div className="container flex flex-col xl:flex-row items-center justify-between h-screen">
-          <div className="flex flex-col ">
+        <div className="container flex flex-col xl:flex-row items-center gap-10 xl:gap-0 xl:justify-between h-screen">
+          <div
+            className={`${
+              fadeRightInView ? "animate-fade-right" : ""
+            } fade-right flex flex-col `}
+          >
             <div className="flex items-center justify-center space-x-8">
               <div className="relative flex items-center justify-center">
                 <div className="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-[#FF56F6]"></div>
@@ -43,15 +54,20 @@ const HomePione = () => {
               />
             </div>
           </div>
-
-          <div className="flex items-center justify-center">
+          <div
+            className={`${fadeLeftInView ? "animate-fade-left" : ""} fade-left`}
+          >
             <SwiperAbout />
           </div>
         </div>
       </section>
       <section className="bg-About bg-no-repeat bg-cover">
         <div className="container">
-          <div className="flex justify-center items-center">
+          <div
+            className={`${
+              fadeDownInView ? "animate-fade-down" : ""
+            } fade-down flex justify-center items-center`}
+          >
             <Image
               src={"/image/animation/Ball1.svg"}
               alt="BallLeft Image"
@@ -82,9 +98,15 @@ const HomePione = () => {
             />
           </div>
           <div className="flex flex-col xl:flex-row items-center md:justify-between mt-10">
-            <div className="flex flex-col items-center space-y-6 p-6">
+            <div
+              className={`${
+                fadeUpInView ? "animate-fade-up" : ""
+              } fade-up flex flex-col items-center space-y-6`}
+            >
               <div className="relative">
-                <div className="absolute -left-10 -top-16 z-30 flex flex-col items-center text-[32px] font-ibm font-bold gap-y-0">
+                <div
+                  className={`absolute -left-10 -top-16 z-30 flex flex-col items-center text-[32px] font-ibm font-bold gap-y-0`}
+                >
                   <span className=" font-ibm font-bold text-[64px] drop-shadow-[0_4px_4px_rgba(255,0,0,20)]">
                     About
                   </span>
@@ -97,7 +119,7 @@ const HomePione = () => {
                   />
                 </div>
                 {/* Phần tử dưới với gradient */}
-                <div className="rounded-xl min-w-[320px] md:w-[800px] min-h-[350px] md:h-[250px] bg-gradient-left-to-right absolute top-10 left-1/2 transform -translate-x-1/2 -translate-y-16 z-10" />
+                <div className=" rounded-xl min-w-[320px] md:w-[800px] min-h-[350px] md:h-[250px] bg-gradient-left-to-right absolute top-10 left-1/2 transform -translate-x-1/2 -translate-y-16 z-10" />
                 {/* Phần tử trên lớn hơn, có gradient và chứa chữ */}
                 <div className="rounded-xl min-w-[320px] md:w-[800px] min-h-[350px] md:h-[250px] bg-gradient-right-to-left z-20 relative">
                   <div className="absolute inset-0 mt-14">
@@ -125,13 +147,17 @@ const HomePione = () => {
       </section>
       <section className="bg-bgImage-Sea bg-no-repeat bg-cover">
         <div className="container">
-          <div className=" flex justify-center items-center">
+          <div
+            className={`${
+              fadeDownInView ? "animate-fade-down" : ""
+            } fade-down flex justify-center items-center`}
+          >
             <Image
               src={"/image/animation/Ball1.svg"}
               alt="BallLeft Image"
               width={80}
               height={80}
-              className="relative -mr-6 -left-4"
+              className="relative -mr-4 left-1 z-30 sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px]"
             />
             <div className="rounded w-52 h-16 bg-gradient-right ">
               <div className="flex justify-center items-center h-full">
@@ -145,69 +171,54 @@ const HomePione = () => {
               alt="Balloon Image"
               width={80}
               height={80}
-              className="relative -ml-6 -right-4"
+              className="relative -ml-4 -right-2 z-30 sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[100px] lg:h-[100px]"
             />
           </div>
-          <div className="relative flex items-center justify-center gap-6 md:gap-20">
+          <div
+            className={`${
+              fadeDownInView ? "animate-fade-down" : ""
+            } fade-down relative flex justify-center items-center`}
+          >
             {/* Hình bên trái với animation */}
             <Image
               src={"/image/animation/Balloon-1.svg"}
               alt="Balloon Image"
               width={200}
               height={200}
-              className="animate-floating hidden md:block w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px] z-10"
+              className="animate-floating hidden xl:block w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px] z-10"
             />
 
             {/* Hình ảnh ở giữa */}
-            <div className="flex items-center flex-col md:flex-row justify-center gap-6 md:gap-10 lg:gap-20 z-20">
-              <Image
-                src={"/image/animation/ElementKingdom.svg"}
-                alt="Element Kingdom"
-                width={323}
-                height={453}
-                className=""
-              />
-              <Image
-                src={"/image/animation/ElementFulu.svg"}
-                alt="Element Fulu"
-                width={516}
-                height={648}
-                className=""
-              />
-              <Image
-                src={"/image/animation/ElementJourney.svg"}
-                alt="Element Journey"
-                width={279}
-                height={452}
-                className=""
-              />
+            <div className="">
+              <Carousel />
             </div>
-
             {/* Hình bên phải với animation */}
             <Image
               src={"/image/animation/Balloon-3.svg"}
               alt="Balloon Image"
               width={200}
               height={200}
-              className="animate-floating hidden md:block w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px] z-10"
+              className="animate-floating hidden xl:block w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px] z-10"
             />
           </div>
         </div>
       </section>
       <section className="bg-MenuStart bg-no-repeat bg-cover">
         <div className="container">
-          <div className=" flex justify-center items-center">
+          <div
+            className={`${
+              fadeUpInView ? "animate-fade-up" : ""
+            }fade-up flex justify-center items-center`}
+          >
             <Image
               src={"/image/animation/Ball1.svg"}
               alt="BallLeft Image"
               width={80}
               height={80}
-              className="relative -mr-6 -left-2 z-30"
+              className="relative -mr-4 left-1 z-30 sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px]"
             />
             <div className="flex justify-center items-center">
-              {/* Màu 1 dưới */}
               <div className="relative rounded w-52 h-16 bg-gradient-red-transparent z-10">
-                {/* Màu 2 trên */}
                 <div className="absolute top-0 left-0 right-0 bottom-0 rounded bg-gradient-orange-transparent z-20">
                   <div className="flex justify-center items-center h-full">
                     <span className="text-[24px] font-ibm font-bold text-white drop-shadow-[0_4px_4px_rgba(255,0,0,0.8)]">
@@ -222,7 +233,7 @@ const HomePione = () => {
               alt="Balloon Image"
               width={80}
               height={80}
-              className="relative -ml-6 right-2 z-30"
+              className="relative -ml-4 -right-2 z-30 sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[100px] lg:h-[100px]"
             />
           </div>
           <div className="flex flex-col items-center space-y-6 p-6">
@@ -240,8 +251,8 @@ const HomePione = () => {
                   </span>
                 </div>
               </div>
-              <div className="rounded-xl w-full min-h-[600px] md:min-h-[800px] xl:h-[500px] bg-gradient-border z-20 relative flex justify-center items-center">
-                <div className="px-4 py-6 md:px-10 md:py-10 flex flex-col lg:flex-row items-center justify-center gap-10 md:gap-20">
+              <div className="rounded-xl w-full h-[680px] md:h-[800px] xl:h-[500px] bg-gradient-border z-20 relative flex justify-center items-center">
+                <div className="px-4 py-6 md:px-10 md:py-10 flex flex-col lg:flex-row items-center  justify-center gap-10 md:gap-20">
                   {/* Coin và Arrow */}
                   <div className="flex justify-center items-center mt-10 space-x-2 md:space-x-4">
                     <div className="flex flex-col items-center">
@@ -250,7 +261,7 @@ const HomePione = () => {
                         alt="icon"
                         width={136}
                         height={132}
-                        className="w-[70px] sm:w-[100px] md:w-[120px] lg:w-[155px]"
+                        className="w-[70px] animate-rotate-y sm:w-[100px] md:w-[120px] lg:w-[155px]"
                       />
                     </div>
                     <Image
@@ -341,7 +352,9 @@ const HomePione = () => {
               Go to portfolio app
             </span>
           </button>
-          <div className="flex items-center flex-col md:flex-row justify-between">
+        </div>
+        <div className="bg-MenuStart bg-cover">
+          <div className="container  flex items-center flex-col md:flex-row justify-between">
             {/* Phần Accordion */}
             <div className="md:w-1/2 mt-10 h-full flex items-center justify-center">
               <AccordionUsage />

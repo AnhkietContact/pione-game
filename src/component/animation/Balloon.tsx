@@ -1,10 +1,17 @@
 import React from "react";
 import Image from "next/image";
+import useInView from "../../hooks/useInView";
 
 const Balloon = () => {
+  const fadeUpInView = useInView(".fade-up", { threshold: 0.5 });
+
   return (
     <div>
-      <div className="flex justify-center items-center">
+      <div
+        className={`${
+          fadeUpInView ? "animate-fade-up" : ""
+        } fade-up flex justify-center items-center relative`}
+      >
         <Image
           src={"/image/animation/Balloon-2.svg"}
           alt="Balloon Image"
@@ -23,4 +30,5 @@ const Balloon = () => {
     </div>
   );
 };
+
 export default Balloon;

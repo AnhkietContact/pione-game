@@ -5,9 +5,6 @@ export const innerTheme = createTheme({
     primary: {
       main: "#FA5805",
     },
-    secondary: {
-      main: "#FA5805",
-    },
   },
   breakpoints: {
     values: {

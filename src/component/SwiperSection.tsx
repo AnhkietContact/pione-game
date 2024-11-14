@@ -1,13 +1,13 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import Image from "next/image";
 import "swiper/swiper-bundle.css";
 import "swiper/css";
-import ButtonNextSwiper from "./CustomSwiper/ButtonNextSwiper"; // Import nút Next
-import ButtonPrevSwiper from "./CustomSwiper/ButtonPrevSwiper"; // Import nút Prev
-import Image from "next/image";
-import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import "swiper/css/navigation";
+import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import ButtonNextSwiper from "./CustomSwiper/ButtonNextSwiper";
+import ButtonPrevSwiper from "./CustomSwiper/ButtonPrevSwiper";
 
 const SwiperPage = () => {
   return (
@@ -19,7 +19,7 @@ const SwiperPage = () => {
           alt="BallLeft Image"
           width={80}
           height={80}
-          className="relative -mr-6 left-10 z-30"
+          className="relative -mr-4 left-1 z-30 sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px]"
         />
 
         {/* Nền gradient dài */}
@@ -42,7 +42,7 @@ const SwiperPage = () => {
           alt="Balloon Image"
           width={80}
           height={80}
-          className="relative -ml-4 right-2 z-30"
+          className="relative -ml-4 -right-2 z-30 sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[100px] lg:h-[100px]"
         />
       </div>
 
@@ -94,7 +94,7 @@ const SwiperPage = () => {
                 {title}
               </h2>
 
-              <div className="flex justify-between items-center w-full mt-4">
+              <div className="flex flex-col md:flex-row gap-5 md:gap-5 justify-between items-center w-full mt-4">
                 <span className="font-orbitron">Yesterday</span>
                 <div className="flex items-center px-4 py-2 rounded-xl bg-gradient-bg border-2 border-gradient-button">
                   Read Now <KeyboardDoubleArrowRightIcon />
@@ -118,27 +118,27 @@ const slidesData = [
   {
     id: 1,
     title: "Flare Network Welcomes Cutting-Edge DeFi Hub SparkDEX",
-    image: "/image/image-1.png", // Đảm bảo rằng đường dẫn hình ảnh là chính xác
+    image: "/image/image-1.png",
   },
   {
     id: 2,
     title: "WUFFI All-In-One Coin Taps into Social Mining Adventure on TON",
-    image: "/image/image-2.png", // Đảm bảo rằng đường dẫn hình ảnh là chính xác
+    image: "/image/image-2.png",
   },
   {
     id: 3,
     title:
       "Rebel Cars Now Boasts a True CGI NFT Asset Marketplace and RC Token",
-    image: "/image/image-3.png", // Đảm bảo rằng đường dẫn hình ảnh là chính xác
+    image: "/image/image-3.png",
   },
   {
     id: 4,
     title: "DappRadar Now Tracks Dapps on Bahamut",
-    image: "/image/image-4.png", // Đảm bảo rằng đường dẫn hình ảnh là chính xác
+    image: "/image/image-4.png",
   },
   {
     id: 5,
-    title: "DappRadar Now Tracks Dapps on Bahamut",
-    image: "/image/image-4.png", // Đảm bảo rằng đường dẫn hình ảnh là chính xác
+    title: "WUFFI All-In-One Coin Taps into Social Mining Adventure on TON",
+    image: "/image/image-2.png",
   },
 ];
