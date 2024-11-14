@@ -11,7 +11,11 @@ export default function AccordionUsage() {
     <ThemeProvider theme={innerTheme}>
       <div className="space-y-4">
         {/* Accordion 1 */}
-        <Accordion className="rounded-2xl bg-white-opacity-10 transition-all duration-300">
+        <Accordion
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="rounded-2xl bg-white-opacity-10 transition-all duration-300"
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1-content"
@@ -31,7 +35,11 @@ export default function AccordionUsage() {
         </Accordion>
 
         {/* Accordion 2 */}
-        <Accordion className="rounded-2xl bg-white-opacity-10 transition-all duration-300">
+        <Accordion
+          data-aos="fade-up"
+          data-aos-duration="4000"
+          className="rounded-2xl bg-white-opacity-10 transition-all duration-300"
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2-content"
@@ -52,7 +60,8 @@ export default function AccordionUsage() {
 
         {/* Accordion 3 */}
         <Accordion
-          defaultExpanded
+          data-aos="fade-up"
+          data-aos-duration="3000"
           className="rounded-2xl bg-white-opacity-10 transition-all duration-300"
         >
           <AccordionSummary

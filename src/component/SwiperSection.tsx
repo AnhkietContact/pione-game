@@ -12,7 +12,7 @@ import ButtonPrevSwiper from "./CustomSwiper/ButtonPrevSwiper";
 const SwiperPage = () => {
   return (
     <>
-      <div className="container flex justify-center items-center relative">
+      <div data-aos="zoom-in-down" className="container flex justify-center items-center relative">
         {/* Hình ảnh trái */}
         <Image
           src={"/image/animation/Ball3.svg"}
@@ -46,7 +46,7 @@ const SwiperPage = () => {
         />
       </div>
 
-      <div className="container w-full mx-auto p-10 relative">
+      <div data-aos="fade-right" className="container w-full mx-auto p-10 relative">
         <Swiper
           spaceBetween={50}
           slidesPerView={4}

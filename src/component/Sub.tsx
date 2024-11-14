@@ -24,32 +24,37 @@ const SubscribeForm = () => {
             </div>
 
             <div className="flex flex-col">
-                {/* form */}
-    
+              {/* form */}
+
+              <div className="flex gap-10">
                 <div className="w-full max-w-[480px] md:max-w-[458px] h-[42px] mt-3 sm:mt-0 border shadow flex items-center">
                   <input
                     type="text"
-                    className="text-sm sm:text-[18px] font-inter font-normal sm:flex-grow max-w-full bg-transparent focus:outline-none pl-2 sm:pl-7
-                   text-white placeholder:text-white min-w-[120px] w-full"
-                    placeholder={"Your mail"}
+                    className="text-sm sm:text-[18px] font-inter font-normal bg-transparent focus:outline-none pl-2 sm:pl-7
+                 text-white placeholder:text-white min-w-[120px] w-full"
+                    placeholder="Your mail"
                   />
+                </div>
+  
+                <div className="mt-3 sm:mt-0">
                   <button
-                    className="min-w-[120px] sm:flex-grow-0 max-w-[142px] h-[44px] rounded-xl font-semibold text-[14px] sm:text-xl text-white
-                   bg-gradient-bg"
+                    className="min-w-[120px] sm:w-auto h-[44px] rounded-xl font-semibold text-[14px] sm:text-xl text-white
+                 bg-gradient-bg"
                   >
                     Subscribe
                   </button>
                 </div>
-    
-                {/* Checkbox và Privacy Policy */}
-                <div className="mt-4 flex items-center text-white text-sm">
-                  <input type="checkbox" id="privacy" className="mr-2" />
-                  <label htmlFor="privacy" className="text-sm">
-                    I have read the
-                    <span className="text-[#FFD600]"> Privacy Policy</span> and I
-                    understand that I can unsubscribe anytime.
-                  </label>
-                </div>
+              </div>
+
+              {/* Checkbox và Privacy Policy */}
+              <div className="mt-4 flex items-center text-white text-sm">
+                <input type="checkbox" id="privacy" className="mr-2" />
+                <label htmlFor="privacy" className="text-sm">
+                  I have read the
+                  <span className="text-[#FFD600]"> Privacy Policy</span> and I
+                  understand that I can unsubscribe anytime.
+                </label>
+              </div>
             </div>
           </div>
         </div>

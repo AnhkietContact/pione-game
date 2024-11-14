@@ -2,29 +2,19 @@ import React from "react";
 import SwiperAbout from "../src/component/SwiperAbout";
 import SwiperPage from "../src/component/SwiperSection";
 import Balloon from "../src/component/animation/Balloon";
-// import Balloon2 from "../src/component/animation/Balloon2";
 import MainLayout from "../src/layout/MainLayout";
 import Image from "next/image";
 import OrgariumCounter from "../src/component/OrgariumCounter";
 import AccordionUsage from "../src/component/Accordion";
 import SubscribeForm from "../src/component/Sub";
 import Carousel from "../src/component/Carousel";
-import useInView from "../src/hooks/useInView";
 
 const HomePione = () => {
-  const fadeRightInView = useInView(".fade-right", { threshold: 0.5 });
-  const fadeLeftInView = useInView(".fade-left", { threshold: 0.5 });
-  const fadeDownInView = useInView(".fade-down", { threshold: 0.5 });
-  const fadeUpInView = useInView(".fade-up", { threshold: 0.5 });
   return (
     <MainLayout>
       <section className="bg-bgImage-Game bg-no-repeat bg-cover min-h-screen mt-20">
         <div className="container flex flex-col xl:flex-row items-center gap-10 xl:gap-0 xl:justify-between h-screen">
-          <div
-            className={`${
-              fadeRightInView ? "animate-fade-right" : ""
-            } fade-right flex flex-col `}
-          >
+          <div data-aos="fade-right" className=" flex flex-col ">
             <div className="flex items-center justify-center space-x-8">
               <div className="relative flex items-center justify-center">
                 <div className="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-[#FF56F6]"></div>
@@ -54,9 +44,7 @@ const HomePione = () => {
               />
             </div>
           </div>
-          <div
-            className={`${fadeLeftInView ? "animate-fade-left" : ""} fade-left`}
-          >
+          <div data-aos="fade-left">
             <SwiperAbout />
           </div>
         </div>
@@ -64,9 +52,8 @@ const HomePione = () => {
       <section className="bg-About bg-no-repeat bg-cover">
         <div className="container">
           <div
-            className={`${
-              fadeDownInView ? "animate-fade-down" : ""
-            } fade-down flex justify-center items-center`}
+            data-aos="zoom-in-up"
+            className="flex justify-center items-center"
           >
             <Image
               src={"/image/animation/Ball1.svg"}
@@ -99,9 +86,8 @@ const HomePione = () => {
           </div>
           <div className="flex flex-col xl:flex-row items-center md:justify-between mt-10">
             <div
-              className={`${
-                fadeUpInView ? "animate-fade-up" : ""
-              } fade-up flex flex-col items-center space-y-6`}
+              data-aos="zoom-in"
+              className="flex flex-col items-center space-y-6"
             >
               <div className="relative">
                 <div
@@ -141,17 +127,15 @@ const HomePione = () => {
                 </div>
               </div>
             </div>
-            <Balloon />
+            <div data-aos="zoom-in">
+              <Balloon />
+            </div>{" "}
           </div>
         </div>
       </section>
       <section className="bg-bgImage-Sea bg-no-repeat bg-cover">
         <div className="container">
-          <div
-            className={`${
-              fadeDownInView ? "animate-fade-down" : ""
-            } fade-down flex justify-center items-center`}
-          >
+          <div data-aos="zoom-in-down" className=" flex justify-center items-center">
             <Image
               src={"/image/animation/Ball1.svg"}
               alt="BallLeft Image"
@@ -174,11 +158,7 @@ const HomePione = () => {
               className="relative -ml-4 -right-2 z-30 sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[100px] lg:h-[100px]"
             />
           </div>
-          <div
-            className={`${
-              fadeDownInView ? "animate-fade-down" : ""
-            } fade-down relative flex justify-center items-center`}
-          >
+          <div className=" relative flex justify-center items-center">
             {/* Hình bên trái với animation */}
             <Image
               src={"/image/animation/Balloon-1.svg"}
@@ -189,7 +169,7 @@ const HomePione = () => {
             />
 
             {/* Hình ảnh ở giữa */}
-            <div className="">
+            <div data-aos="zoom-in-up">
               <Carousel />
             </div>
             {/* Hình bên phải với animation */}
@@ -205,11 +185,7 @@ const HomePione = () => {
       </section>
       <section className="bg-MenuStart bg-no-repeat bg-cover">
         <div className="container">
-          <div
-            className={`${
-              fadeUpInView ? "animate-fade-up" : ""
-            }fade-up flex justify-center items-center`}
-          >
+          <div className=" flex justify-center items-center">
             <Image
               src={"/image/animation/Ball1.svg"}
               alt="BallLeft Image"
@@ -245,6 +221,7 @@ const HomePione = () => {
                     alt="icon"
                     width={150}
                     height={180}
+                    className="animate-floating"
                   />
                   <span className="absolute font-ibm font-bold text-[24px] text-white drop-shadow-[0_4px_4px_rgba(255,0,0,0.8)]">
                     TOKEN
@@ -255,7 +232,7 @@ const HomePione = () => {
                 <div className="px-4 py-6 md:px-10 md:py-10 flex flex-col lg:flex-row items-center  justify-center gap-10 md:gap-20">
                   {/* Coin và Arrow */}
                   <div className="flex justify-center items-center mt-10 space-x-2 md:space-x-4">
-                    <div className="flex flex-col items-center">
+                    <div data-aos="flip-left" className="flex flex-col items-center">
                       <Image
                         src="/image/coin/CoinPIO.svg"
                         alt="icon"
@@ -271,17 +248,19 @@ const HomePione = () => {
                       height={50}
                       className="w-[100px] sm:w-[120px] md:w-[150px] lg:w-[216px]"
                     />
-                    <Image
-                      src="/image/coin/Coin.svg"
-                      alt="icon"
-                      width={100}
-                      height={100}
-                      className="w-[70px] sm:w-[100px] md:w-[120px] lg:w-[155px]"
-                    />
+                    <div data-aos="flip-left">
+                      <Image
+                        src="/image/coin/Coin.svg"
+                        alt="icon"
+                        width={100}
+                        height={100}
+                        className="w-[70px] sm:w-[100px] md:w-[120px] lg:w-[155px]"
+                      />
+                    </div>
                   </div>
 
                   {/* Gold Coin Description */}
-                  <div className="relative py-6 px-4 mt-5 md:py-10 md:px-5 rounded-xl w-full sm:w-[300px] md:w-[400px] lg:w-[569px] bg-black bg-opacity-20 flex flex-col items-center">
+                  <div data-aos="zoom-in-right" className="relative py-6 px-4 mt-5 md:py-10 md:px-5 rounded-xl w-full sm:w-[300px] md:w-[400px] lg:w-[569px] bg-black bg-opacity-20 flex flex-col items-center">
                     <div className="absolute -top-12 left-0 flex flex-col items-center z-30">
                       <span className="font-ibm font-bold text-[32px] sm:text-[48px] md:text-[64px] drop-shadow-[0_4px_4px_rgba(255,0,0,0.8)]">
                         Gold coin
@@ -317,12 +296,12 @@ const HomePione = () => {
       </section>
       <section className="mt-10">
         <div className="container">
-          <div className="max-w-[400px] py-3 px-6 bg-Red-Opacity rounded-xl shadow-lg">
+          <div data-aos="fade-right" className="max-w-[400px] py-3 px-6 bg-Red-Opacity rounded-xl shadow-lg">
             <span className=" font-orbitron text-xl font-semibold">
               Far more to explore
             </span>
           </div>
-          <div className="mt-5 max-w-[500px]">
+          <div data-aos="fade-right" className="mt-5 max-w-[500px]">
             <span className="font-inter text-[20px]">
               Peerless, actionable, multichain data and coverage on the widest
               selection of dapps, NFT collections, DeFi projects and more. View
@@ -335,19 +314,19 @@ const HomePione = () => {
           </div>
         </div>
         <div className="container mt-20">
-          <div className="flex justify-end ml-auto max-w-[400px] py-3 px-6 bg-Red-Opacity-Right rounded-xl shadow-lg">
+          <div data-aos="fade-left" className="flex justify-end ml-auto max-w-[400px] py-3 px-6 bg-Red-Opacity-Right rounded-xl shadow-lg">
             <span className="flex justify-end font-orbitron text-xl font-semibold">
               You&apos;re in control
             </span>
           </div>
-          <div className="max-w-[500px]">
+          <div data-aos="fade-right" className="max-w-[500px]">
             <span className="font-inter text-[20px] ">
               Effectively manage your digital assets, swap, buy, sell, (even
               take a little inspiration from the famous) all from within your
               PIONE GAME Portfolio.
             </span>
           </div>
-          <button className="rounded-xl bg-gradient-bg flex justify-center items-center p-4 mt-10">
+          <button data-aos="zoom-in-up" className="rounded-xl bg-gradient-bg flex justify-center items-center p-4 mt-10">
             <span className="text-center font-orbitron font-bold text-[13px]">
               Go to portfolio app
             </span>
@@ -372,7 +351,7 @@ const HomePione = () => {
             </div>
           </div>
         </div>
-        <div className="mt-20">
+        <div data-aos="fade-up" className="mt-20">
           <SubscribeForm />
         </div>
       </section>
