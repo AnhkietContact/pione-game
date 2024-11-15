@@ -145,7 +145,7 @@ export const Products = [
       { label: "DappRadar API", link: "/dapp-radar-api" },
       { label: "Brand Assets", link: "/brand-assets" },
       { label: "FAQ", link: "/faq" },
-      { label: "DappLaunch", link: "/dapp-launch" },
+      { label: "DappLaunch", link: "/dapp-launch" }, 
     ],
   },
   {

@@ -9,15 +9,11 @@ import { innerTheme } from "@/theme/theme";
 export default function AccordionUsage() {
   return (
     <ThemeProvider theme={innerTheme}>
-      <div className="space-y-4">
+      <div data-aos="fade-up" className="space-y-4">
         {/* Accordion 1 */}
-        <Accordion
-          data-aos="fade-up"
-          data-aos-duration="3000"
-          className="rounded-2xl bg-white-opacity-10 transition-all duration-300"
-        >
+        <Accordion className="rounded-2xl bg-white-opacity-10 transition-all duration-300">
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#FF5C00" }} />}
             aria-controls="panel1-content"
             id="panel1-header"
           >
@@ -35,13 +31,9 @@ export default function AccordionUsage() {
         </Accordion>
 
         {/* Accordion 2 */}
-        <Accordion
-          data-aos="fade-up"
-          data-aos-duration="4000"
-          className="rounded-2xl bg-white-opacity-10 transition-all duration-300"
-        >
+        <Accordion className="rounded-2xl bg-white-opacity-10 transition-all duration-300">
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#FF5C00" }} />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
@@ -59,13 +51,9 @@ export default function AccordionUsage() {
         </Accordion>
 
         {/* Accordion 3 */}
-        <Accordion
-          data-aos="fade-up"
-          data-aos-duration="3000"
-          className="rounded-2xl bg-white-opacity-10 transition-all duration-300"
-        >
+        <Accordion className="rounded-2xl bg-white-opacity-10 transition-all duration-300">
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#FF5C00" }} />}
             aria-controls="panel3-content"
             id="panel3-header"
           >

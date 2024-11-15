@@ -17,7 +17,7 @@ const config: Config = {
       colors: {
         "text-color": "#8198A4",
         "primary-footer": "#2A5872",
-        "primary-4": "#00D768",
+        "primary-4": "#FF5C00",
         "primary-5": "#8C8C8C",
         "primary-6": "#8198A4",
         "primary-7": "#F80492",
@@ -102,14 +102,6 @@ const config: Config = {
         "move-right": "move-right 3s ease-in-out infinite",
         "move-top": "move-top 3s ease-in-out infinite",
         "move-bottom": "move-bottom 3s ease-in-out infinite",
-        fade: "fade 1s ease-in-out",
-        "fade-down": "fade-down 2s ease-in-out",
-        "fade-up": "fade-up 1s ease-in-out",
-        "fade-left": "fade-left 1s ease-in-out",
-        "fade-right": "fade-right 1s ease-in-out",
-        "flip-up": "flip-up 1s ease-in-out",
-        "flip-down": "flip-down 1s ease-in-out",
-        "rotate-y": "rotate-y 1s ease-in-out forwards",
       },
       keyframes: {
         "rotate-y": {
@@ -136,34 +128,6 @@ const config: Config = {
         "move-bottom": {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(50px)" },
-        },
-        fade: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
-        "fade-down": {
-          "0%": { opacity: "0", transform: "translateY(-20px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        "fade-left": {
-          "0%": { opacity: "0", transform: "translateX(20px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
-        },
-        "fade-right": {
-          "0%": { opacity: "0", transform: "translateX(-20px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
-        },
-        "flip-up": {
-          "0%": { transform: "rotateX(90deg)", opacity: "0" },
-          "100%": { transform: "rotateX(0)", opacity: "1" },
-        },
-        "flip-down": {
-          "0%": { transform: "rotateX(-90deg)", opacity: "0" },
-          "100%": { transform: "rotateX(0)", opacity: "1" },
         },
       },
     },

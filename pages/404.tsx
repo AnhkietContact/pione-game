@@ -2,17 +2,17 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Custom404() {
+export default function Error404() {
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
       <div className="text-center">
         {/* Hình ảnh 404 */}
         <div className="relative w-64 h-64 mx-auto">
           <Image
-            src="/404.png"
+            src="/image/svg/404.svg"
             alt="404 Not Found"
             layout="fill"
-            objectFit="contain"
+            objectFit="cover"
           />
         </div>
         <p className="text-2xl font-semibold text-gray-700 mt-4">
@@ -22,9 +22,9 @@ export default function Custom404() {
           The page you are looking for does not exist.
         </p>
         <Link href="/">
-          <a className="inline-block mt-6 px-6 py-3 text-sm font-medium text-white bg-blue-500 rounded hover:bg-blue-600">
+          <p className="inline-block mt-6 px-6 py-3 text-sm font-medium text-white bg-gradient-bg rounded hover:bg-gradient-bg">
             Go back to homepage
-          </a>
+          </p>
         </Link>
       </div>
     </div>

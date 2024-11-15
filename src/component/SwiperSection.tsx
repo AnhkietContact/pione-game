@@ -96,9 +96,9 @@ const SwiperPage = () => {
 
               <div className="flex flex-col md:flex-row gap-5 md:gap-5 justify-between items-center w-full mt-4">
                 <span className="font-orbitron">Yesterday</span>
-                <div className="flex items-center px-4 py-2 rounded-xl bg-gradient-bg border-2 border-gradient-button">
+                <button className="flex items-center px-4 py-2 rounded-xl bg-gradient-bg border-2 border-gradient-button">
                   Read Now <KeyboardDoubleArrowRightIcon />
-                </div>
+                </button>
               </div>
             </SwiperSlide>
           ))}

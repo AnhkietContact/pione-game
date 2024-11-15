@@ -23,52 +23,55 @@ const Header: React.FC = () => {
     };
   }, []);
 
-  // Dữ liệu của menu
   const Scrollheader = [
     { id: 1, label: "ABOUT", link: "about" },
-    { id: 2, label: "Game modes ", link: "modes" },
-    { id: 3, label: "PARTICIPATE", link: "participate" },
-    { id: 4, label: "USE", link: "user" },
-    { id: 5, label: "LEARN", link: "learn" },
-    { id: 6, label: "BLOG & NEWS", link: "blog" },
+    { id: 2, label: "Game modes", link: "modes" },
+    { id: 3, label: "TOKEN", link: "token" },
+    { id: 4, label: "Latest news", link: "latest" },
+    { id: 5, label: "Discover", link: "discover" },
+    { id: 6, label: "Portfolio", link: "portfolio" },
     { id: 7, label: "PLAY", link: "play" },
   ];
+
   return (
     <Fragment>
       <header
-        className={`${isScrolled ? "bg-opacity-70" : "bg-opacity-100"}
-      bg-[#000] text-white fixed top-0 left-0 w-full z-[9999] shadow-lg transition-all duration-300 ease-in-out`}
+        className={`${
+          isScrolled ? "bg-[#000] bg-opacity-70" : "shadow-lg"
+        } 
+        fixed top-0 left-0 w-full z-[9999] transition-all duration-300 ease-in-out`}
       >
         <div className="container py-5 flex justify-between items-center">
-          {/* logo */}
+          {/* Logo */}
           <div className="flex-shrink-0">
             <Link href={"/"}>
               <Image
-                src={"../image/svg/LogoHeader.svg"}
-                alt=""
+                src={"/image/svg/LogoHeader.svg"}
+                alt="Logo"
                 width={200}
                 height={200}
                 className="h-auto"
               />
             </Link>
           </div>
+
           {/* Navigation */}
           <nav className="hidden xl:flex space-x-6 font-orbitron">
             {Scrollheader.map((item) => (
               <Link
                 key={item.id}
-                href={`#${item.link}`}
+                href={`/#${item.link}`}
                 scroll={false}
                 className={`px-4 py-2 ${
                   item.id === 7 ? "rounded-full bg-[#FA5805]" : ""
-                } transform transition-transform duration-200 ease-in-out hover:translate-y-[-3px] `}
+                } transform transition-transform duration-200 ease-in-out hover:translate-y-[-3px]`}
               >
                 {item.label}
               </Link>
             ))}
           </nav>
 
-          {/* Hamburger Menu Icon */}
+          {/* Icon Menu Hamburger cho thiết bị di động */}
           <div className="xl:hidden flex items-center justify-center gap-4">
             <button
               onClick={toggleMenu}
@@ -83,13 +86,14 @@ const Header: React.FC = () => {
             </button>
           </div>
         </div>
-        {/* Mobile Menu */}
+
+        {/* Menu cho di động */}
         {isMenuOpen && (
           <nav className="lg:hidden bg-opacity-90 bg-[#141414] p-4">
             {Scrollheader.map((item) => (
               <Link
                 key={item.id}
-                href={item.link}
+                href={`#${item.link}`}
                 className="block py-2"
                 onClick={toggleMenu}
                 scroll={false}
@@ -103,4 +107,5 @@ const Header: React.FC = () => {
     </Fragment>
   );
 };
+
 export default Header;

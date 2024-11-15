@@ -8,17 +8,21 @@ import OrgariumCounter from "../src/component/OrgariumCounter";
 import AccordionUsage from "../src/component/Accordion";
 import SubscribeForm from "../src/component/Sub";
 import Carousel from "../src/component/Carousel";
+import Link from "next/link";
 
 const HomePione = () => {
   return (
     <MainLayout>
-      <section className="bg-bgImage-Game bg-no-repeat bg-cover min-h-screen mt-20">
+      <section className="bg-bgImage-Game bg-no-repeat bg-cover min-h-screen ">
         <div className="container flex flex-col xl:flex-row items-center gap-10 xl:gap-0 xl:justify-between h-screen">
           <div data-aos="fade-right" className=" flex flex-col ">
             <div className="flex items-center justify-center space-x-8">
               <div className="relative flex items-center justify-center">
                 <div className="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-[#FF56F6]"></div>
-                <p className="text-center text-[48px] font-ibm font-bold px-16 py-5 text-transparent bg-clip-text bg-gradient-to-r from-customYellow to-customRed">
+                <p
+                  className="text-center text-[48px] font-ibm font-bold px-16 py-5 drop-shadow-[0_4px_4px_rgba(255,255,255,5)]
+                   text-transparent bg-clip-text bg-gradient-to-r from-customYellow to-customRed"
+                >
                   PIONE GAME
                 </p>
                 <div className="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-[#FF56F6]"></div>
@@ -30,18 +34,22 @@ const HomePione = () => {
               unique characteristics and reward values.
             </span>
             <div className="flex gap-2 md:gap-20 flex-row justify-center mt-10">
-              <Image
-                src="/image/icon/GooglePlay.svg"
-                width="150"
-                height="150"
-                alt=""
-              />
-              <Image
-                src="/image/icon/AppStore.svg"
-                width="150"
-                height="150"
-                alt=""
-              />
+              <Link href="/">
+                <Image
+                  src="/image/icon/GooglePlay.svg"
+                  width="150"
+                  height="150"
+                  alt=""
+                />
+              </Link>
+              <Link href="/">
+                <Image
+                  src="/image/icon/AppStore.svg"
+                  width="150"
+                  height="150"
+                  alt=""
+                />
+              </Link>
             </div>
           </div>
           <div data-aos="fade-left">
@@ -49,7 +57,7 @@ const HomePione = () => {
           </div>
         </div>
       </section>
-      <section className="bg-About bg-no-repeat bg-cover">
+      <section id="about" className="bg-About bg-no-repeat bg-cover">
         <div className="container">
           <div
             data-aos="zoom-in-up"
@@ -133,9 +141,12 @@ const HomePione = () => {
           </div>
         </div>
       </section>
-      <section className="bg-bgImage-Sea bg-no-repeat bg-cover">
+      <section id="modes" className="bg-bgImage-Sea bg-no-repeat bg-cover">
         <div className="container">
-          <div data-aos="zoom-in-down" className=" flex justify-center items-center">
+          <div
+            data-aos="zoom-in-down"
+            className=" flex justify-center items-center"
+          >
             <Image
               src={"/image/animation/Ball1.svg"}
               alt="BallLeft Image"
@@ -183,7 +194,7 @@ const HomePione = () => {
           </div>
         </div>
       </section>
-      <section className="bg-MenuStart bg-no-repeat bg-cover">
+      <section id="token" className="bg-MenuStart bg-no-repeat bg-cover">
         <div className="container">
           <div className=" flex justify-center items-center">
             <Image
@@ -232,7 +243,10 @@ const HomePione = () => {
                 <div className="px-4 py-6 md:px-10 md:py-10 flex flex-col lg:flex-row items-center  justify-center gap-10 md:gap-20">
                   {/* Coin và Arrow */}
                   <div className="flex justify-center items-center mt-10 space-x-2 md:space-x-4">
-                    <div data-aos="flip-left" className="flex flex-col items-center">
+                    <div
+                      data-aos="flip-left"
+                      className="flex flex-col items-center"
+                    >
                       <Image
                         src="/image/coin/CoinPIO.svg"
                         alt="icon"
@@ -260,7 +274,10 @@ const HomePione = () => {
                   </div>
 
                   {/* Gold Coin Description */}
-                  <div data-aos="zoom-in-right" className="relative py-6 px-4 mt-5 md:py-10 md:px-5 rounded-xl w-full sm:w-[300px] md:w-[400px] lg:w-[569px] bg-black bg-opacity-20 flex flex-col items-center">
+                  <div
+                    data-aos="zoom-in-right"
+                    className="relative py-6 px-4 mt-5 md:py-10 md:px-5 rounded-xl w-full sm:w-[300px] md:w-[400px] lg:w-[569px] bg-black bg-opacity-20 flex flex-col items-center"
+                  >
                     <div className="absolute -top-12 left-0 flex flex-col items-center z-30">
                       <span className="font-ibm font-bold text-[32px] sm:text-[48px] md:text-[64px] drop-shadow-[0_4px_4px_rgba(255,0,0,0.8)]">
                         Gold coin
@@ -291,12 +308,15 @@ const HomePione = () => {
           </div>
         </div>
       </section>
-      <section className="bg-About2 bg-no-repeat bg-cover">
+      <section id="latest" className="bg-About2 bg-no-repeat bg-cover">
         <SwiperPage />
       </section>
       <section className="mt-10">
-        <div className="container">
-          <div data-aos="fade-right" className="max-w-[400px] py-3 px-6 bg-Red-Opacity rounded-xl shadow-lg">
+        <div id="discover" className="container">
+          <div
+            data-aos="fade-right"
+            className="max-w-[400px] py-3 px-6 bg-Red-Opacity rounded-xl shadow-lg"
+          >
             <span className=" font-orbitron text-xl font-semibold">
               Far more to explore
             </span>
@@ -313,20 +333,26 @@ const HomePione = () => {
             <OrgariumCounter />
           </div>
         </div>
-        <div className="container mt-20">
-          <div data-aos="fade-left" className="flex justify-end ml-auto max-w-[400px] py-3 px-6 bg-Red-Opacity-Right rounded-xl shadow-lg">
+        <div id="portfolio" className="container mt-20">
+          <div
+            data-aos="fade-left"
+            className="flex justify-end ml-auto max-w-[400px] py-3 px-6 bg-Red-Opacity-Right rounded-xl shadow-lg"
+          >
             <span className="flex justify-end font-orbitron text-xl font-semibold">
               You&apos;re in control
             </span>
           </div>
-          <div data-aos="fade-right" className="max-w-[500px]">
+          <div data-aos="fade-right" className="max-w-[650px]">
             <span className="font-inter text-[20px] ">
               Effectively manage your digital assets, swap, buy, sell, (even
               take a little inspiration from the famous) all from within your
               PIONE GAME Portfolio.
             </span>
           </div>
-          <button data-aos="zoom-in-up" className="rounded-xl bg-gradient-bg flex justify-center items-center p-4 mt-10">
+          <button
+            data-aos="zoom-in-up"
+            className="rounded-xl bg-gradient-bg flex justify-center items-center p-4 mt-10"
+          >
             <span className="text-center font-orbitron font-bold text-[13px]">
               Go to portfolio app
             </span>

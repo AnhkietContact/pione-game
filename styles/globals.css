@@ -6,7 +6,31 @@
   --background: #000;
   --foreground: #ffff;
 }
+::-webkit-scrollbar {
+  width: 6px; /* Chiều rộng của thanh cuộn */
+}
 
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Màu nền của thanh cuộn */
+  border-radius: 10px; /* Bo góc cho thanh cuộn */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Màu của thanh cuộn */
+  border-radius: 10px; /* Bo góc cho thanh cuộn */
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển tiếp */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #eb0303;
+  transform: scale(1.2); /* Tăng kích thước thanh cuộn */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   color: var(--foreground);
   background: var(--background);

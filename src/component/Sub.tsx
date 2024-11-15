@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const SubscribeForm = () => {
@@ -30,15 +31,15 @@ const SubscribeForm = () => {
                 <div className="w-full max-w-[480px] md:max-w-[458px] h-[42px] mt-3 sm:mt-0 border shadow flex items-center">
                   <input
                     type="text"
-                    className="text-sm sm:text-[18px] font-inter font-normal bg-transparent focus:outline-none pl-2 sm:pl-7
+                    className="text-sm sm:text-[18px] font-orbitron font-normal bg-transparent focus:outline-none pl-2 sm:pl-7
                  text-white placeholder:text-white min-w-[120px] w-full"
                     placeholder="Your mail"
                   />
                 </div>
-  
+
                 <div className="mt-3 sm:mt-0">
                   <button
-                    className="min-w-[120px] sm:w-auto h-[44px] rounded-xl font-semibold text-[14px] sm:text-xl text-white
+                    className="min-w-[120px] sm:w-auto h-[44px] rounded-xl font-orbitron font-semibold text-[14px] sm:text-xl text-white
                  bg-gradient-bg"
                   >
                     Subscribe
@@ -47,12 +48,15 @@ const SubscribeForm = () => {
               </div>
 
               {/* Checkbox và Privacy Policy */}
-              <div className="mt-4 flex items-center text-white text-sm">
+              <div className="mt-4 flex items-center font-orbitron text-sm">
                 <input type="checkbox" id="privacy" className="mr-2" />
                 <label htmlFor="privacy" className="text-sm">
                   I have read the
-                  <span className="text-[#FFD600]"> Privacy Policy</span> and I
-                  understand that I can unsubscribe anytime.
+                  <Link href={"/"} className="text-[#FFD600]">
+                    {" "}
+                    Privacy Policy
+                  </Link>{" "}
+                  and I understand that I can unsubscribe anytime.
                 </label>
               </div>
             </div>
