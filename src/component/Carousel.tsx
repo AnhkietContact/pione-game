@@ -50,7 +50,7 @@ const CustomSwiper = () => {
       <Swiper
         ref={swiperRef}
         spaceBetween={20}
-        slidesPerView={3}
+        slidesPerView={1}
         centeredSlides={true}
         loop={true}
         autoplay={{
@@ -68,7 +68,7 @@ const CustomSwiper = () => {
         {imageData.map((src, index) => (
           <SwiperSlide
             key={index}
-            className="transition-all duration-300 ease-in-out"
+            className="transition-all duration-300 ease-in-out mt-20 md:mt-0"
           >
             <div>
               <Image
@@ -76,7 +76,7 @@ const CustomSwiper = () => {
                 alt={`Slide ${index}`}
                 width={550}
                 height={620}
-                className="w-[550px] h-[620px] object-contain rounded-lg"
+                className="w-[300px] h-[300px] md:w-[550px] md:h-[620px] object-contain rounded-lg"
               />
             </div>
           </SwiperSlide>
@@ -90,7 +90,7 @@ const CustomSwiper = () => {
           alt="Menu Bar"
           width={1920} // Đảm bảo chiều rộng hình ảnh phù hợp với màn hình
           height={620}
-          className="w-full h-[620px] object-contain rounded-lg"
+          className="w-full h-[620px] hidden lg:block object-contain rounded-lg"
         />
       </div>
     </div>

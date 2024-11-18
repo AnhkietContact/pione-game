@@ -14,7 +14,7 @@ const SwiperAbout = () => {
   ];
 
   return (
-    <div className="relative w-full mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-3xl">
+    <div className="px-10 relative w-full mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-3xl">
       <Swiper
         spaceBetween={10}
         slidesPerView={1}
@@ -45,7 +45,7 @@ const SwiperAbout = () => {
       </Swiper>
 
       {/* Biểu tượng Pause ở góc dưới bên trái, thay đổi kích thước theo responsive */}
-      <div className="absolute -bottom-5 -left-8 shadow-[0_0px_15px_5px_rgba(255,255,255,0.8)] rounded-xl z-10">
+      <div className="px-10 absolute -bottom-5 -left-8 shadow-[0_0px_15px_5px_rgba(255,255,255,0.8)] rounded-xl z-10">
         <Image
           src="/image/Pause.png"
           alt="Small Icon"

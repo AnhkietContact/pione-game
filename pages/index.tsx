@@ -16,7 +16,7 @@ const HomePione = () => {
   return (
     <MainLayout>
       <section className="bg-bgImage-Game bg-no-repeat bg-cover min-h-screen ">
-        <div className="container flex flex-col xl:flex-row items-center gap-10 xl:gap-0 xl:justify-between h-screen">
+        <div className="container py-28 flex flex-col xl:flex-row items-center gap-10 xl:gap-0 xl:justify-between h-screen">
           <div data-aos="fade-right" className=" flex flex-col ">
             <div className="flex items-center justify-center space-x-8">
               <div className="relative flex items-center justify-center">
@@ -177,7 +177,7 @@ const HomePione = () => {
               alt="Balloon Image"
               width={200}
               height={200}
-              className=" absolute animate-fade-in-haftLeftReimagined w-[150px] h-[150px] md:w-[200px] md:h-[200px] z-10"
+              className=" absolute hidden lg:block animate-fade-in-haftLeftReimagined w-[150px] h-[150px] md:w-[200px] md:h-[200px] z-10"
             />
 
             <div data-aos="zoom-in-up" className="z-20">
@@ -188,7 +188,7 @@ const HomePione = () => {
               alt="Balloon Image"
               width={200}
               height={200}
-              className="absolute animate-fade-in-haftRightReimagined w-[150px] h-[150px] md:w-[200px] md:h-[200px] z-10"
+              className="absolute hidden lg:block animate-fade-in-haftRightReimagined w-[150px] h-[150px] md:w-[200px] md:h-[200px] z-10"
             />
           </div>
         </div>

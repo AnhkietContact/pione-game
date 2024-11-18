@@ -18,7 +18,7 @@ const Footer = () => {
               alt="Logo"
             />
             {/* Mạng xã hội */}
-            <div className="flex flex-col mb-6">
+            <div className="flex flex-col mb-6 mt-5">
               <span>Social</span>
               <ul className="flex items-center gap-4 mt-2">
                 {Icon.map((icon) => (
