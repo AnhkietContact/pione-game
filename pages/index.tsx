@@ -2,6 +2,8 @@ import React from "react";
 import SwiperAbout from "../src/component/SwiperAbout";
 import SwiperPage from "../src/component/SwiperSection";
 import Balloon from "../src/component/animation/Balloon";
+import FlyAnimate from "../src/component/animation/FlyRight";
+import AnimateStart from "../src/component/animation/Start";
 import MainLayout from "../src/layout/MainLayout";
 import Image from "next/image";
 import OrgariumCounter from "../src/component/OrgariumCounter";
@@ -170,33 +172,30 @@ const HomePione = () => {
             />
           </div>
           <div className=" relative flex justify-center items-center">
-            {/* Hình bên trái với animation */}
             <Image
               src={"/image/animation/Balloon-1.svg"}
               alt="Balloon Image"
               width={200}
               height={200}
-              className="animate-floating hidden xl:block w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px] z-10"
+              className=" absolute animate-fade-in-haftLeftReimagined w-[150px] h-[150px] md:w-[200px] md:h-[200px] z-10"
             />
 
-            {/* Hình ảnh ở giữa */}
-            <div data-aos="zoom-in-up">
+            <div data-aos="zoom-in-up" className="z-20">
               <Carousel />
             </div>
-            {/* Hình bên phải với animation */}
             <Image
               src={"/image/animation/Balloon-3.svg"}
               alt="Balloon Image"
               width={200}
               height={200}
-              className="animate-floating hidden xl:block w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px] z-10"
+              className="absolute animate-fade-in-haftRightReimagined w-[150px] h-[150px] md:w-[200px] md:h-[200px] z-10"
             />
           </div>
         </div>
       </section>
       <section id="token" className="bg-MenuStart bg-no-repeat bg-cover">
         <div className="container">
-          <div className=" flex justify-center items-center">
+          <div className="flex justify-center items-center">
             <Image
               src={"/image/animation/Ball1.svg"}
               alt="BallLeft Image"
@@ -290,7 +289,7 @@ const HomePione = () => {
                         height={60}
                       />
                     </div>
-                    <span className="text-justify font-inter text-[14px] sm:text-[16px] mt-10">
+                    <span className="md:text-justify font-inter text-[14px] sm:text-[16px] mt-10">
                       In PIONE GAME, players can easily exchange PIO Coins for
                       Gold Coins to participate in exciting activities and
                       improve their fishing efficiency. PIO Coin is the main
@@ -308,8 +307,11 @@ const HomePione = () => {
           </div>
         </div>
       </section>
+
       <section id="latest" className="bg-About2 bg-no-repeat bg-cover">
+        <AnimateStart />
         <SwiperPage />
+        <FlyAnimate />
       </section>
       <section className="mt-10">
         <div id="discover" className="container">
@@ -329,8 +331,15 @@ const HomePione = () => {
               maybe, uncover the next blockchain unicorn.
             </span>
           </div>
-          <div className="relative">
+          <div className="relative z-20">
             <OrgariumCounter />
+            {/* <Image
+              src={"/image/animation/Balloon-3.svg"}
+              alt="BallLeft Image"
+              width={200}
+              height={247}
+              className="animate-fade-in-haftRightReimagined absolute bottom-0 right-0 transform translate-y-1/3 translate-x-1/3 z-10"
+            /> */}
           </div>
         </div>
         <div id="portfolio" className="container mt-20">

@@ -8,11 +8,15 @@ import "swiper/css/navigation";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import ButtonNextSwiper from "./CustomSwiper/ButtonNextSwiper";
 import ButtonPrevSwiper from "./CustomSwiper/ButtonPrevSwiper";
+import Link from "next/link";
 
 const SwiperPage = () => {
   return (
     <>
-      <div data-aos="zoom-in-down" className="container flex justify-center items-center relative">
+      <div
+        data-aos="zoom-in-down"
+        className="container flex justify-center items-center relative"
+      >
         {/* Hình ảnh trái */}
         <Image
           src={"/image/animation/Ball3.svg"}
@@ -46,7 +50,10 @@ const SwiperPage = () => {
         />
       </div>
 
-      <div data-aos="fade-right" className="container w-full mx-auto p-10 relative">
+      <div
+        data-aos="fade-right"
+        className="container w-full mx-auto p-10 relative z-20"
+      >
         <Swiper
           spaceBetween={50}
           slidesPerView={4}
@@ -78,7 +85,7 @@ const SwiperPage = () => {
           modules={[Autoplay]}
           className="swiper-container"
         >
-          {slidesData.map(({ id, title, image }) => (
+          {slidesData.map(({ id, title, image, link }) => (
             <SwiperSlide
               key={id}
               className="flex flex-col items-center container py-5 bg-gradient-gray rounded-xl border-2 border-gray-300 min-h-[320px]"
@@ -96,9 +103,12 @@ const SwiperPage = () => {
 
               <div className="flex flex-col md:flex-row gap-5 md:gap-5 justify-between items-center w-full mt-4">
                 <span className="font-orbitron">Yesterday</span>
-                <button className="flex items-center px-4 py-2 rounded-xl bg-gradient-bg border-2 border-gradient-button">
+                <Link
+                  href={link}
+                  className="flex items-center px-4 py-2 rounded-xl bg-gradient-bg border-2 border-gradient-button"
+                >
                   Read Now <KeyboardDoubleArrowRightIcon />
-                </button>
+                </Link>
               </div>
             </SwiperSlide>
           ))}
@@ -119,26 +129,31 @@ const slidesData = [
     id: 1,
     title: "Flare Network Welcomes Cutting-Edge DeFi Hub SparkDEX",
     image: "/image/image-1.png",
+    link: "/",
   },
   {
     id: 2,
     title: "WUFFI All-In-One Coin Taps into Social Mining Adventure on TON",
     image: "/image/image-2.png",
+    link: "/",
   },
   {
     id: 3,
     title:
       "Rebel Cars Now Boasts a True CGI NFT Asset Marketplace and RC Token",
     image: "/image/image-3.png",
+    link: "/",
   },
   {
     id: 4,
     title: "DappRadar Now Tracks Dapps on Bahamut",
     image: "/image/image-4.png",
+    link: "/",
   },
   {
     id: 5,
     title: "WUFFI All-In-One Coin Taps into Social Mining Adventure on TON",
     image: "/image/image-2.png",
+    link: "/",
   },
 ];

@@ -98,36 +98,121 @@ const config: Config = {
       },
       animation: {
         floating: "floating 3s ease-in-out infinite",
-        "move-left": "move-left 3s ease-in-out infinite",
-        "move-right": "move-right 3s ease-in-out infinite",
-        "move-top": "move-top 3s ease-in-out infinite",
-        "move-bottom": "move-bottom 3s ease-in-out infinite",
+        wiggle: "wiggle 1s ease-in-out",
+        ping: "ping 0.1s cubic-bezier(0, 0, 0.2, 1) infinite",
+        "ping-delay-1": "ping 2s infinite 0s",
+        "ping-delay-2": "ping 2s infinite 0.2s",
+        "ping-delay-3": "ping 2s infinite 0.4s",
+        "ping-delay-4": "ping 2s infinite 0.6s",
+        "ping-delay-5": "ping 2s infinite 0.8s",
+        "ping-delay-6": "ping 2s infinite 1s",
+        "ping-delay-7": "ping 2s infinite 1.2s",
+        "ping-delay-8": "ping 2s infinite 1.4s",
+        "fade-in-haftRight2":
+          "fade-in-haftRight2 5s ease-in-out infinite alternate",
+        "fade-in-haftRightReimagined":
+          "fade-in-haftRightReimagined 30s ease-in-out infinite alternate",
+        "fade-in-haftBottomtReimagined":
+          "fade-in-haftBottomtReimagined 30s ease-in-out infinite alternate",
+        "fade-in-haftLeftReimagined":
+          "fade-in-haftLeftReimagined 30s ease-in-out infinite alternate",
+        "fade-in-haftLeftBottomReimagined":
+          "fade-in-haftLeftBottomReimagined 30s ease-in-out infinite alternate",
+        "fade-in-RightLeftReimagined":
+          "fade-in-RightLeftReimagined 30s linear infinite alternate",
+        "spin-clockwise": "spin-clockwise 50s linear infinite",
+        "spin-counterclockwise": "spin-counterclockwise 50s linear infinite",
+        "ping-delay": "ping 2s cubic-bezier(0, 0, 0.2, 1) infinite 20s",
       },
       keyframes: {
-        "rotate-y": {
-          "0%": { transform: "rotateY(0deg)" },
-          "50%": { transform: "rotateY(180deg)" },
-          "100%": { transform: "rotateY(360deg)" },
+        wiggle: {
+          "0%": { opacity: "0" },
+          "25%": { opacity: "0.3" },
+          "50%": { opacity: "0.6" },
+          "75%": { opacity: "0.8" },
+          "100%": { opacity: "1" },
+        },
+
+        ping: {
+          "0%": { transform: "scale(1)", opacity: "1" },
+          "50%": { transform: "scale(1.5)", opacity: "0.5" },
+          "100%": { transform: "scale(1)", opacity: "0" }, 
+        },
+        "fade-in-haftLeftReimagined": {
+          "0%": {
+            top: "9%",
+            left: "12%",
+          },
+          "33%": {
+            top: "22%",
+            left: "5%",
+          },
+          "66%": {
+            top: "11%",
+            left: "9%",
+          },
+          "100%": {
+            left: "25%",
+            top: "8%",
+          },
+        },
+        "fade-in-haftLeftBottomReimagined": {
+          "0%": {
+            bottom: "9%",
+            left: "12%",
+          },
+          "33%": {
+            bottom: "22%",
+            left: "5%",
+          },
+          "66%": {
+            bottom: "11%",
+            left: "9%",
+          },
+          "100%": {
+            left: "25%",
+            bottom: "8%",
+          },
+        },
+        "fade-in-haftRightReimagined": {
+          "0%": {
+            top: "9%",
+            right: "12%",
+          },
+          "33%": {
+            right: "22%",
+            top: "5%",
+          },
+          "66%": {
+            top: "11%",
+            right: "9%",
+          },
+          "100%": {
+            right: "25%",
+            top: "8%",
+          },
+        },
+        "fade-in-haftBottomtReimagined": {
+          "0%": {
+            bottom: "3%",
+            right: "33%",
+          },
+          "33%": {
+            bottom: "10%",
+            right: "5%",
+          },
+          "66%": {
+            bottom: "4%",
+            right: "35%",
+          },
+          "100%": {
+            bottom: "12%",
+            right: "7%",
+          },
         },
         floating: {
           "0%, 100%": { transform: "translateY(-10px)" },
           "50%": { transform: "translateY(10px)" },
-        },
-        "move-left": {
-          "0%, 100%": { transform: "translateX(0)" },
-          "50%": { transform: "translateX(-50px)" },
-        },
-        "move-right": {
-          "0%, 100%": { transform: "translateX(0)" },
-          "50%": { transform: "translateX(50px)" },
-        },
-        "move-top": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-50px)" },
-        },
-        "move-bottom": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(50px)" },
         },
       },
     },
