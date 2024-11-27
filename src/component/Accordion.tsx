@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -72,6 +73,7 @@ export default function AccordionUsage() {
             and exploring the blockchain world of PIONE GAME.
           </AccordionDetails>
         </Accordion>
+        
       </div>
     </ThemeProvider>
   );

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -29,7 +30,6 @@ const SwiperPage = () => {
         {/* Nền gradient dài */}
         <div className="flex justify-center items-center w-full max-w-[500px] mt-20 relative z-10">
           <div className="relative rounded w-full h-16 bg-gradient-red-transparent z-10">
-            {/* Màu 2 trên */}
             <div className="absolute top-0 left-0 right-0 bottom-0 rounded bg-gradient-orange-transparent z-20">
               <div className="flex justify-center items-center h-full">
                 <span className="text-[24px] font-ibm font-bold text-white drop-shadow-[0_4px_4px_rgba(255,0,0,0.8)]">
@@ -63,24 +63,19 @@ const SwiperPage = () => {
           }}
           loop={true}
           breakpoints={{
-            300: {
+            320: {
               slidesPerView: 1,
             },
-            500: {
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
               slidesPerView: 2,
             },
-            650: {
-              slidesPerView: 3,
-            },
-            960: {
-              slidesPerView: 3,
-            },
-            1200: {
+            1024: {
               slidesPerView: 4,
             },
-            1500: {
-              slidesPerView: 4,
-            },
+            
           }}
           modules={[Autoplay]}
           className="swiper-container"

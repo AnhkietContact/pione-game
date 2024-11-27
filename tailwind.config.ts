@@ -1,9 +1,8 @@
 import type { Config } from "tailwindcss";
 import defaultConfig from "tailwindcss/defaultConfig";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import tailwindcssTextshadow from "tailwindcss-textshadow";
+// import tailwindcssTextshadow from "tailwindcss-textshadow";
 /** @type {import('tailwindcss').Config} */
-
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -42,7 +41,6 @@ const config: Config = {
         // Gradient từ trái sang phải
         "gradient-left-to-right":
           "linear-gradient(90deg, rgba(106,0,0,0.02) 0%, rgba(110,0,60,0.19) 43%, rgba(95,6,54,0.35) 59%, rgba(173,0,93,0.83) 100%, rgba(255,0,0,0) 0%)",
-
         // Gradient từ phải sang trái
         "gradient-right-to-left":
           "linear-gradient(-90deg, rgba(165,0,89,0.02) 40%, rgba(165,0,89,0.7) 70%, rgba(54,0,89,0.36) 100%, rgba(173,0,93,0.7) 83%, rgba(255,0,0,0) 0%)",
@@ -51,11 +49,12 @@ const config: Config = {
         "gradient-orange-transparent":
           "linear-gradient(to left, #FF5C00, rgba(0, 0, 0, 0))",
         "gradient-border": `linear-gradient(-45deg, 
-          rgba(165, 0, 89, 0.4) 2%, 
-          rgba(165, 0, 89, 0.7) 19%, 
-          rgba(165, 0, 89, 1) 36%, 
-          rgba(173, 0, 93, 0.7) 59%, 
-          rgba(255, 0, 0, 0) 83%)`,
+          rgba(165, 0, 89, 0.4), 
+          rgba(165, 0, 89, 0.7), 
+          rgba(165, 0, 89, 1), 
+          rgba(173, 0, 93, 0.7), 
+          rgba(255, 0, 0, 0))`,
+
         "gradient-gray":
           "linear-gradient(90deg, rgba(97, 97, 97, 1) 0%, rgba(255, 255, 255, 0) 100%)",
         "gradient-button":
@@ -78,7 +77,8 @@ const config: Config = {
         "Shadow-White": "0 4px 6px rgba(255, 255, 255, 0.5)",
         "text-shadow": "0 4px 6px rgba(255, 255, 255, 0.5)",
         red: "0 4px 6px rgba(255, 0, 0, 0.5)",
-        Purple: "#36011D",
+        Purple:
+          "-4px 4px 20px rgba(54, 1, 29, 0.5), 4px 4px 20px rgba(54, 1, 29, 0.5), 0 8px 20px rgba(54, 1, 29, 0.5)",
       },
       container: {
         ...defaultConfig?.theme?.container,
@@ -136,7 +136,7 @@ const config: Config = {
         ping: {
           "0%": { transform: "scale(1)", opacity: "1" },
           "50%": { transform: "scale(1.5)", opacity: "0.5" },
-          "100%": { transform: "scale(1)", opacity: "0" }, 
+          "100%": { transform: "scale(1)", opacity: "0" },
         },
         "fade-in-haftLeftReimagined": {
           "0%": {

@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -60,8 +61,8 @@ const CustomSwiper = () => {
         modules={[Autoplay]}
         breakpoints={{
           320: { slidesPerView: 1 },
-          640: { slidesPerView: 2 },
-          768: { slidesPerView: 2 },
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 1 },
           1024: { slidesPerView: 3 },
         }}
       >
@@ -76,7 +77,7 @@ const CustomSwiper = () => {
                 alt={`Slide ${index}`}
                 width={550}
                 height={620}
-                className="w-[300px] h-[300px] md:w-[550px] md:h-[620px] object-contain rounded-lg"
+                className="w-[300px] h-[300px] md:w-full md:h-[620px] object-contain rounded-lg"
               />
             </div>
           </SwiperSlide>
@@ -90,7 +91,7 @@ const CustomSwiper = () => {
           alt="Menu Bar"
           width={1920} // Đảm bảo chiều rộng hình ảnh phù hợp với màn hình
           height={620}
-          className="w-full h-[620px] hidden lg:block object-contain rounded-lg"
+          className="w-full h-[620px] hidden md:block object-contain rounded-lg"
         />
       </div>
     </div>

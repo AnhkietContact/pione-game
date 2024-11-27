@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useSwiper } from "swiper/react";

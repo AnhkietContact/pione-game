@@ -11,8 +11,8 @@ export default function Error404() {
           <Image
             src="/image/svg/404.svg"
             alt="404 Not Found"
-            layout="fill"
-            objectFit="cover"
+            width={600}
+            height={600}
           />
         </div>
         <p className="text-2xl font-semibold text-gray-700 mt-4">

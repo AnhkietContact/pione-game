@@ -1,10 +1,15 @@
+import AnimateStart from "@/component/animation/Start";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
   return (
-    <footer data-aos="fade-up" className="bg-bgImage-Footer bg-cover bg-no-repeat bg-top relative text-white px-10 py-10">
+    <footer
+      data-aos="fade-up"
+      className="bg-bgImage-Footer bg-cover bg-no-repeat bg-top relative text-white px-10 py-10"
+    >
+      <AnimateStart />
       <div className="container">
         <div className="flex flex-col xl:flex-row items-center gap-20 ">
           {/* Logo và mô tả */}

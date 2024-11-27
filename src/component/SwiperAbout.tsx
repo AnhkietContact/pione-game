@@ -1,7 +1,6 @@
 "use client";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -14,7 +13,7 @@ const SwiperAbout = () => {
   ];
 
   return (
-    <div className="px-10 relative w-full mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-3xl">
+    <div className="px-10 relative w-full mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-3xl ">
       <Swiper
         spaceBetween={10}
         slidesPerView={1}
@@ -23,10 +22,7 @@ const SwiperAbout = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, Pagination]}
+        modules={[Autoplay]}
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
@@ -45,13 +41,13 @@ const SwiperAbout = () => {
       </Swiper>
 
       {/* Biểu tượng Pause ở góc dưới bên trái, thay đổi kích thước theo responsive */}
-      <div className="px-10 absolute -bottom-5 -left-8 shadow-[0_0px_15px_5px_rgba(255,255,255,0.8)] rounded-xl z-10">
+      <div className="ml-10 xl:ml-0 absolute -bottom-5 -left-8 shadow-[0_0px_15px_5px_rgba(255,255,255,0.8)] rounded-xl z-10">
         <Image
           src="/image/Pause.png"
           alt="Small Icon"
           width={80} // Kích thước icon thay đổi theo màn hình
           height={80}
-          className="md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24"
+          className="md:w-16 md:h-[50px] lg:w-20 lg:h-14 xl:w-24 xl:h-14"
         />
       </div>
     </div>

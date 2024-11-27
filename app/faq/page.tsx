@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -6,7 +7,6 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Button, TextField } from "@mui/material";
 import Image from "next/image";
-import MainLayout from "../src/layout/MainLayout";
 
 const Faq: React.FC = () => {
   const [fullName, setFullName] = useState("");
@@ -17,7 +17,7 @@ const Faq: React.FC = () => {
     console.log({ fullName, email, content });
   };
   return (
-    <MainLayout>
+    <>
       <div className="p-8 bg-black  shadow-lg mt-20">
         <div className="flex justify-center items-center">
           <Image
@@ -177,7 +177,7 @@ const Faq: React.FC = () => {
           </div>
         </div>
       </div>
-    </MainLayout>
+    </>
   );
 };
 
