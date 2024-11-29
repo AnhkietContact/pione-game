@@ -1,0 +1,22 @@
+3:"$Sreact.fragment"
+4:I[4547,[],"ClientSegmentRoot"]
+5:I[6932,["777","static/chunks/66ec4792-4008006ae945d1c9.js","970","static/chunks/970-7098af209f2c0d33.js","404","static/chunks/404-a26d83a921c49941.js","839","static/chunks/839-221f2bf0b60d3ed3.js","901","static/chunks/901-90795d552685ca31.js","266","static/chunks/266-3eeb6a0bf97f4514.js","177","static/chunks/app/layout-70307e312dabf9f1.js"],"default"]
+6:I[5244,[],""]
+7:I[3866,[],""]
+8:I[7970,["970","static/chunks/970-7098af209f2c0d33.js","839","static/chunks/839-221f2bf0b60d3ed3.js","345","static/chunks/app/not-found-c04e0c0d0dd1fb59.js"],"Image"]
+9:I[4839,["970","static/chunks/970-7098af209f2c0d33.js","839","static/chunks/839-221f2bf0b60d3ed3.js","345","static/chunks/app/not-found-c04e0c0d0dd1fb59.js"],""]
+b:I[7033,[],"ClientPageRoot"]
+c:I[2247,["970","static/chunks/970-7098af209f2c0d33.js","404","static/chunks/404-a26d83a921c49941.js","367","static/chunks/367-6c557c467289dd28.js","427","static/chunks/427-e493adf3bd7aca31.js","505","static/chunks/app/faq/page-2894872bb60e3295.js"],"default"]
+f:I[6213,[],"OutletBoundary"]
+11:I[6213,[],"MetadataBoundary"]
+13:I[6213,[],"ViewportBoundary"]
+15:I[7401,["219","static/chunks/app/global-error-b1bcdfb0dbe0c78f.js"],"default"]
+1:HL["/_next/static/css/04ed12f6fe04128f.css","style"]
+2:HL["/_next/static/css/462e077f29ec365b.css","style"]
+0:{"P":null,"b":"F6_cDiWJ2u6-mbbwhkmPS","p":"","c":["","faq",""],"i":false,"f":[[["",{"children":["faq",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$3","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/04ed12f6fe04128f.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/462e077f29ec365b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L4",null,{"Component":"$5","slots":{"children":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"flex items-center justify-center h-screen bg-gray-100","children":["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"relative w-64 h-64 mx-auto","children":["$","$L8",null,{"src":"/image/svg/404.svg","alt":"404 Not Found","width":600,"height":600}]}],["$","p",null,{"className":"text-2xl font-semibold text-gray-700 mt-4","children":"Oops! Page not found"}],["$","p",null,{"className":"text-gray-500 mt-2","children":"The page you are looking for does not exist."}],["$","$L9",null,{"href":"/","children":["$","p",null,{"className":"inline-block mt-6 px-6 py-3 text-sm font-medium text-white bg-gradient-bg rounded hover:bg-gradient-bg","children":"Go back to homepage"}]}]]}]}],"notFoundStyles":[]}]},"params":{},"promise":"$@a"}]]}],{"children":["faq",["$","$3","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","faq","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]]}],{"children":["__PAGE__",["$","$3","c",{"children":[["$","$Lb",null,{"Component":"$c","searchParams":{},"params":"$0:f:0:1:1:props:children:1:props:params","promises":["$@d","$@e"]}],null,["$","$Lf",null,{"children":"$L10"}]]}],{},null]},null]},null],["$","$3","h",{"children":[null,["$","$3","y_ZOWF5HzJZIawaFoL5ab",{"children":[["$","$L11",null,{"children":"$L12"}],["$","$L13",null,{"children":"$L14"}],null]}]]}]]],"m":"$undefined","G":["$15",[]],"s":false,"S":true}
+a:{}
+d:{}
+e:{}
+14:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+12:[["$","meta","0",{"charSet":"utf-8"}]]
+10:null

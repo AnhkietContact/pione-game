@@ -27,7 +27,6 @@ const SubscribeForm = () => {
 
             <div className="flex flex-col">
               {/* form */}
-
               <div className="flex gap-10">
                 <div className="w-full max-w-[480px] md:max-w-[458px] h-[42px] mt-3 sm:mt-0 border shadow flex items-center">
                   <input
@@ -52,12 +51,11 @@ const SubscribeForm = () => {
               <div className="mt-4 flex items-center font-orbitron text-sm">
                 <input type="checkbox" id="privacy" className="mr-2" />
                 <label htmlFor="privacy" className="text-sm">
-                  I have read the
-                  <Link href={"/"} className="text-[#FFD600]">
-                    {" "}
+                  I have read the&nbsp;
+                  <Link href={"/privacy"} className="text-[#FFD600]">
                     Privacy Policy
-                  </Link>{" "}
-                  and I understand that I can unsubscribe anytime.
+                  </Link>
+                  &nbsp;and I understand that I can unsubscribe anytime.
                 </label>
               </div>
             </div>

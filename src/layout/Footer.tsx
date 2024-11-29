@@ -12,10 +12,7 @@ const Footer = () => {
       <AnimateStart />
       <div className="container">
         <div className="flex flex-col xl:flex-row items-center gap-20 ">
-          {/* Logo và mô tả */}
           <div className="flex flex-col items-center xl:items-start xl:flex-grow">
-            {" "}
-            {/* Cân bằng chiều cao và căn chỉnh logo */}
             <Image
               src="/image/svg/LogoHeader.svg"
               width={250}
@@ -24,7 +21,7 @@ const Footer = () => {
             />
             {/* Mạng xã hội */}
             <div className="flex flex-col mb-6 mt-5">
-              <span>Social</span>
+              <span className="font-ibm font-medium text-[18px]">Social</span>
               <ul className="flex items-center gap-4 mt-2">
                 {Icon.map((icon) => (
                   <li
@@ -44,9 +41,8 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          {/* Danh sách sản phẩm */}
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-6 mt-10 md:mb-0 font-ibm text-[16px] leading-4 xl:flex-grow">
-            {/* Cân bằng chiều cao và giãn các mục sản phẩm */}
             {Products.map((product) => (
               <div key={product.id}>
                 <h3 className="font-semibold text-lg">{product.name}</h3>
@@ -57,8 +53,6 @@ const Footer = () => {
                         href={link.link}
                         className="hover:text-white focus:text-white"
                       >
-                        {" "}
-                        {/* Thêm hiệu ứng hover và focus */}
                         {link.label}
                       </Link>
                     </li>
@@ -69,7 +63,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Đường kẻ và thông tin bản quyền */}
         <hr className="my-6 border-white" />
         <div className="flex flex-col md:flex-row justify-between items-center container mx-auto">
           <p className="text-sm text-[#A7A7A7]">© 2024 PIONE GAME</p>
@@ -81,7 +74,6 @@ const Footer = () => {
 
 export default Footer;
 
-// Dữ liệu sản phẩm mẫu với các mục con
 export const Icon = [
   {
     name: "Telegram",
@@ -136,8 +128,8 @@ export const Products = [
       { label: "About us", link: "/about" },
       { label: "Press", link: "/press" },
       { label: "Disclaimer", link: "/disclaimer" },
-      { label: "Privacy policy", link: "/privacy-policy" },
-      { label: "Terms of use", link: "/terms-of-use" },
+      { label: "Privacy policy", link: "/privacy" },
+      { label: "Terms of use", link: "/terms" },
       { label: "Careers", link: "/careers" },
     ],
   },
@@ -150,7 +142,7 @@ export const Products = [
       { label: "DappRadar API", link: "/dapp-radar-api" },
       { label: "Brand Assets", link: "/brand-assets" },
       { label: "FAQ", link: "/faq" },
-      { label: "DappLaunch", link: "/dapp-launch" }, 
+      { label: "DappLaunch", link: "/dapp-launch" },
     ],
   },
   {
