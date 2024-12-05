@@ -30,7 +30,7 @@ export default function LayoutMain({
         <title>PIONE GAME</title>
         <link
           rel="shortcut icon"
-          href="/image/svg/LogoGame.svg"
+          href="/image/LogoGame.png"
           type="image/png"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

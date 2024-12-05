@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
                 </p>
                 <p  className="text-[20px] font-rubik font-bold font-ibm px-5 md:px-16 py-5 drop-shadow-[0_4px_4px_rgba(255,255,255,5)]
                    text-transparent bg-clip-text bg-gradient-to-r from-customYellow to-customRed">
-                  Version: 1.5 - Last updated: November 28, 2024.
+                  Version: 1.5 - Last updated: November 29, 2024.
                 </p>
               </div>
               <div className="flex mt-5 space-x-4 "></div>

@@ -56,7 +56,7 @@ const Header: React.FC = () => {
           <div className="flex-shrink-0">
             <Link href={"/"}>
               <Image
-                src={"/image/svg/LogoHeader.svg"}
+                src={"/image/LogoHeader.png"}
                 alt="Logo"
                 width={200}
                 height={200}
